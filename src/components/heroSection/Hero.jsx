@@ -89,9 +89,7 @@ const Overlay = styled.div`
 `;
 
 const Text = styled.p`
-  font-size: 18px;
-  font-weight: 600;
-  max-width: 40%;
+  max-width: 46%;
   margin-bottom: 32px;
 `;
 

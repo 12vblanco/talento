@@ -20,8 +20,10 @@ const Div = styled.div`
   min-height: 340px;
   background: #fff;
   margin: 22px;
-  border-radius: 6px;
+  border-radius: 50%;
+  padding: 80px 30px 0px 50px;
   box-shadow: 4px 6px 8px rgba(3, 3, 3, 0.1);
+  outline: 5px solid #fd8642;
   color: #333;
 `;
 

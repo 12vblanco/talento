@@ -1,14 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../../assets/T-logo.png";
+import logo2 from "../../assets/logoWth.png";
 
 export function FooterLogo({}) {
   return (
     <LogoContainer>
-      <LogoImage src={logo} alt="Company logo" />
+      <LogoRow>
+        <LogoImage src={logo} alt="Company logo" />
+        <LogoImage2 src={logo2} alt="Company logo" />
+      </LogoRow>
       <Column>
         {" "}
-        <CompanyName>Talento </CompanyName>
+        <CompanyName>TalentO </CompanyName>
         <LogoText>Your Bespoke</LogoText>
         <LogoText>Talent Support</LogoText>{" "}
       </Column>
@@ -18,19 +22,31 @@ export function FooterLogo({}) {
 const LogoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  margin-top: 24px;
+`;
+
+const LogoRow = styled.div`
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: space-around;
+  margin: 24px 0;
 `;
 
 const LogoImage = styled.img`
-  width: 90px;
-  height: 90px;
+  width: inherit;
+  max-width: 90px;
+  height: auto;
   margin-right: 1rem;
   @media (max-width: 380px) {
     width: 70px;
     height: 70px;
   }
+`;
+
+const LogoImage2 = styled.img`
+  max-width: 160px;
 `;
 
 const CompanyName = styled.h1`

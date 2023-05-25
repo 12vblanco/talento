@@ -26,7 +26,8 @@ const Div = styled.div`
   min-height: 460px;
   padding: 22px 0;
   height: fit-content;
-  background: #f1f1f0;
+  background: #fff;
+  /* background: #f1f1f0; */
 `;
 
 export default Services;
