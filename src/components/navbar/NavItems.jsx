@@ -66,4 +66,5 @@ const CTAButton = styled.button`
   border: none;
   border-radius: 5px;
   font-size: 18px;
+  font-weight: 700;
 `;

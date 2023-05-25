@@ -5,13 +5,13 @@ const Opening = () => {
   return (
     <>
       <Ul>
-        <Li>Mon 12:00 - 10:00</Li>
+        {/* <Li>Mon 12:00 - 10:00</Li>
         <Li>Tue 12:00 - 10:00</Li>
         <Li>Wed 12:00 - 10:00 </Li>
         <Li>Thu 12:00 - 10:00</Li>
         <Li>Fri 12:00 - 10:00</Li>
         <Li>Sat 12:00 - 10:00</Li>
-        <Li>Sun 12:00 - 10:00 </Li>
+        <Li>Sun 12:00 - 10:00 </Li> */}
       </Ul>
     </>
   );

@@ -6,8 +6,8 @@ const LogoAddress = () => {
   return (
     <Div>
       <FooterLogo />
-      <Address>Some Address St</Address>
-      <Address>eh83jo, Edinburgh</Address>
+      {/* <Address>Some Address St</Address>
+      <Address>eh83jo, Edinburgh</Address> */}
     </Div>
   );
 };
