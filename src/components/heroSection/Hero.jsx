@@ -92,6 +92,7 @@ const Text = styled.p`
   font-size: 18px;
   font-weight: 600;
   max-width: 40%;
+  margin-bottom: 32px;
 `;
 
 export default Hero;

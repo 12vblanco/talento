@@ -7,6 +7,7 @@ const CTAButton = (props) => {
 
 const Div = styled.button`
   background-color: #fd8642;
+  font-family: "Montserrat", sans-serif;
   color: #fff;
   padding: 1rem 1.2rem;
   border: none;
