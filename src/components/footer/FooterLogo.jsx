@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/TlogoBlk.png";
 
 export function FooterLogo({}) {
   return (
@@ -8,8 +8,9 @@ export function FooterLogo({}) {
       <LogoImage src={logo} alt="Company logo" />
       <Column>
         {" "}
-        <CompanyName>Company </CompanyName>
-        <CompanyName>Name </CompanyName>
+        <CompanyName>Talento </CompanyName>
+        <LogoText>Your Bespoke</LogoText>
+        <LogoText>Talent Support</LogoText>{" "}
       </Column>
     </LogoContainer>
   );
@@ -44,4 +45,14 @@ const CompanyName = styled.h1`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const LogoText = styled.h1`
+  font-size: 15px;
+  text-align: left;
+  margin: 0;
+  font-weight: 700;
+  @media (max-width: 380px) {
+    font-size: 28px;
+  }
 `;

@@ -8,8 +8,8 @@ export function Logo({}) {
       <Column>
         <LogoImage src={logo} alt="Company logo" />
 
-        <CompanyName>Your Bespoke</CompanyName>
-        <CompanyName>Talent Support</CompanyName>
+        <LogoText>Your Bespoke</LogoText>
+        <LogoText>Talent Support</LogoText>
       </Column>
     </LogoContainer>
   );
@@ -31,9 +31,9 @@ const LogoImage = styled.img`
   }
 `;
 
-const CompanyName = styled.h1`
+const LogoText = styled.h1`
   font-size: 15px;
-  text-align: center;
+  text-align: left;
   margin: 0;
   font-weight: 700;
   @media (max-width: 380px) {
