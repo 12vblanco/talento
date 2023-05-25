@@ -31,7 +31,7 @@ const DivContent = styled.div`
   position: absolute;
   width: 100vw;
   height: calc(100vh - 143px);
-  margin-top: 140px;
+  margin-top: 120px;
   top: 0;
   left: 0;
   display: flex;

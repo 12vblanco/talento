@@ -56,5 +56,5 @@ const NavLink = styled.a`
   color: #333;
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 17px;
 `;

@@ -9,7 +9,7 @@ export function Logo({}) {
       <Column>
         <Link to="/home">
           <LogoImage src={logo} alt="Company logo" />
-          <LogoText>Your Bespoke Talent Support</LogoText>
+          <LogoText> Bespoke Talent Support</LogoText>
           <LogoText></LogoText>
         </Link>
       </Column>
@@ -26,9 +26,8 @@ const LogoContainer = styled.div`
 `;
 
 const LogoImage = styled.img`
-  width: 140px;
+  width: 170px;
   height: auto;
-  /* margin-right: 1rem; */
   @media (max-width: 380px) {
     width: 70px;
     height: 70px;
@@ -37,7 +36,7 @@ const LogoImage = styled.img`
 
 const LogoText = styled.h1`
   color: #333;
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Montserrat", sans-serif;
   width: 100%;
   margin: 0;

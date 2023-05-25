@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import img1 from "../../assets/img/hr1.jpg";
 import img2 from "../../assets/img/hr2.jpg";
+import CTAButton from "../misc/CTABUtton";
 
 const Section = () => {
   return (
@@ -18,6 +19,7 @@ const Section = () => {
             present at any of the stages or in the full cycle of your integrated
             Talent Management process.
           </P>
+          <CTAButton>Something</CTAButton>
         </TextDiv>
       </Div>{" "}
       <Div>
@@ -30,6 +32,7 @@ const Section = () => {
             present at any of the stages or in the full cycle of your integrated
             Talent Management process.
           </P>
+          <CTAButton>Something</CTAButton>
         </TextDiv>{" "}
         <Img src={img2} />
       </Div>

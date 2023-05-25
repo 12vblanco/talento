@@ -15,12 +15,9 @@ const Footer = () => {
       </Div>
       <CopyDiv>
         <H4>
-          Victor Blanco 2019 - {new Date().getFullYear()} &copy;
-          <span>&nbsp;&nbsp;</span>
+          Web Victor Blanco {new Date().getFullYear()} &copy;
+          <span>&nbsp;&nbsp;</span> <Terms to="#">Terms & Conditions</Terms>
         </H4>
-        <Terms>
-          <div to="#">Terms & Conditions</div>
-        </Terms>
       </CopyDiv>
     </FooterContainer>
   );
@@ -51,10 +48,14 @@ const Column = styled.div`
 `;
 
 const CopyDiv = styled.div`
+  font-family: "Montserrat", sans-serif;
+
+  display: flex;
+  max-width: fit-content;
+  margin: 0 auto;
   color: white;
   width: 100%;
   height: fit-content;
-  padding-bottom: 22px;
   background: #333;
 `;
 
