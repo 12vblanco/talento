@@ -30,7 +30,7 @@ const Hero = () => {
 const DivContent = styled.div`
   position: absolute;
   width: 100vw;
-  height: calc(100vh - 233px);
+  height: calc(100vh - 143px);
   margin-top: 140px;
   top: 0;
   left: 0;
@@ -38,7 +38,7 @@ const DivContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 26%;
+  padding-left: 29%;
 `;
 const Content = styled.div`
   color: white;
@@ -51,14 +51,14 @@ const HeroDiv = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: calc(100vh - 173px);
+  height: calc(100vh - 143px);
   margin-top: 140px;
   background: blue;
 `;
 
 const Div = styled.div`
   width: 100vw;
-  height: calc(100vh - 173px);
+  height: calc(100vh - 143px);
   margin-top: 0px;
   display: flex;
   flex-direction: column;
@@ -83,7 +83,7 @@ const Overlay = styled.div`
   top: 0;
   left: 0;
   width: 100vw;
-  height: calc(100vh - 173px);
+  height: calc(100vh - 143px);
   margin-top: 140px;
   background: rgba(0, 0, 0, 0.6);
 `;
