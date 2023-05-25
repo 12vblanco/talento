@@ -22,6 +22,7 @@ const Div = styled.div`
   margin: 22px;
   border-radius: 6px;
   box-shadow: 4px 6px 8px rgba(3, 3, 3, 0.1);
+  color: #333;
 `;
 
 const CardTitle = styled.h1`

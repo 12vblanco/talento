@@ -6,10 +6,8 @@ export function Container(props) {
 
 const Div = styled.div`
   width: 1240px;
-  height: 140px;
   background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
 `;

@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import CookieConsent from "react-cookie-consent";
-import { Home } from "./components/screens/Home";
-// import { Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import Footer from "./components/footer/Footer";
 import Header from "./components/navbar/Header";
-// import Home from "./components/pages/Home";
+import { About } from "./components/screens/About";
+import { Candidates } from "./components/screens/Candidates";
+import { Home } from "./components/screens/Home";
 // import Terms from "./components/pages/Terms";
 
 function scrollToTop() {
@@ -57,14 +58,14 @@ function App() {
       </CookieConsent>
 
       <Header handleToggle={handleToggle} isOpen={isOpen} />
-      <Home />
-      <Footer />
-      {/* <Routes> */}
-      {/* <Route path="/" element={<Home />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/terms" element={<Terms scrollToTop={scrollToTop} />} /> */}
-      {/* </Routes> */}
-      {/* <Footer scrollToTop={scrollToTop} /> */}
+        <Route path="/about" element={<About />} />
+        <Route path="/candidates" element={<Candidates />} />
+        {/* <Route path="/terms" element={<Terms scrollToTop={scrollToTop} />} /> */}
+      </Routes>
+      <Footer scrollToTop={scrollToTop} />
     </>
   );
 }

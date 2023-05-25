@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import video from "../../assets/video/video.mp4";
+import CTAButton from "../misc/CTABUtton";
 
 const Hero = () => {
   return (
@@ -8,22 +9,42 @@ const Hero = () => {
       {" "}
       <Div>
         <VideoPlay src={video} autoPlay loop muted />
-        {/* <BackImg src={img1} /> */}
         <Overlay />
-        <Content>
-          <h2>Welcoming TalentO</h2>
-          <Text>
-            We envisage a nimble and adaptable partnership with HR professionals
-            and people managers in curating HR architectures and building people
-            capabilities. As enablers, we commit ourselves to a more pragmatist
-            and personalized approach in working together with partners and
-            clients.{" "}
-          </Text>
-        </Content>
+        <DivContent>
+          <Content>
+            <h2>Welcoming TalentO</h2>
+            <Text>
+              We envisage a nimble and adaptable partnership with HR
+              professionals and people managers in curating HR architectures and
+              building people capabilities. As enablers, we commit ourselves to
+              a more pragmatist and personalized approach in working together
+              with partners and clients.{" "}
+            </Text>
+            <CTAButton>{"Brief Us"}</CTAButton>
+          </Content>
+        </DivContent>
       </Div>
     </HeroDiv>
   );
 };
+const DivContent = styled.div`
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 233px);
+  margin-top: 140px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 26%;
+`;
+const Content = styled.div`
+  color: white;
+  width: fit-content;
+  text-align: left;
+`;
 
 const HeroDiv = styled.div`
   display: flex;
@@ -31,7 +52,7 @@ const HeroDiv = styled.div`
   align-items: center;
   width: 100vw;
   height: calc(100vh - 173px);
-  margin-top: 170px;
+  margin-top: 140px;
   background: blue;
 `;
 
@@ -57,28 +78,13 @@ const VideoPlay = styled.video`
 //   object-fit: cover;
 // `;
 
-const Content = styled.div`
-  position: absolute;
-  width: 100vw;
-  height: calc(100vh - 173px);
-  margin-top: 170px;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 34px;
-  color: white;
-`;
-
 const Overlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: calc(100vh - 173px);
-  margin-top: 170px;
+  margin-top: 140px;
   background: rgba(0, 0, 0, 0.6);
 `;
 

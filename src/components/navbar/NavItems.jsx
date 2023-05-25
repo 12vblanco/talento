@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import CTAButton from "../misc/CTABUtton";
 import Burger from "./Burger";
 
 export function NavItems({ isOpen, handleToggle }) {
@@ -11,19 +12,15 @@ export function NavItems({ isOpen, handleToggle }) {
             <NavLink href="/">Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/contact">Link1</NavLink>
+            <NavLink href="/about">About</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/bio">Link2</NavLink>
+            <NavLink href="/candidates">Candidates</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/bio">Link3</NavLink>
-          </NavItem>
-          <NavItem>
-            <CTAButton>Contact</CTAButton>
+            <CTAButton>{"Contact"}</CTAButton>
           </NavItem>
         </NavList>
-        {/* <Social /> */}
       </Nav>
       <Burger handleToggle={handleToggle} isOpen={isOpen} />
     </>
@@ -34,6 +31,8 @@ const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding-right: 10%;
+  font-family: "Montserrat", sans-serif;
   @media (max-width: 760px) {
     display: none;
   }
@@ -46,6 +45,7 @@ const NavList = styled.ul`
   justify-content: center;
   margin: 0;
   padding: 0;
+  cursor: pointer;
 `;
 
 const NavItem = styled.li`
@@ -57,14 +57,4 @@ const NavLink = styled.a`
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
-`;
-
-const CTAButton = styled.button`
-  background-color: #fd8642;
-  color: #fff;
-  padding: 1rem 1.2rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  font-weight: 700;
 `;

@@ -8,6 +8,11 @@ const Services = () => {
       <Card />
       <Card />
       <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </Div>
   );
 };

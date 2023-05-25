@@ -22,7 +22,9 @@ const HeaderContainer = styled.header`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  background: #fff;
+  height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;

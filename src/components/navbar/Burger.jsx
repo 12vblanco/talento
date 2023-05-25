@@ -79,6 +79,8 @@ const BurgerIcon = styled.div`
   position: relative;
   height: 50px;
   width: 50px;
+  margin-right: 10%;
+
   cursor: pointer;
   margin-top: 3px;
 
@@ -177,7 +179,7 @@ const OverlayMenu = styled.div`
   width: 100vw;
   height: 100vh;
   background: #fff;
-  margin-top: 170px;
+  margin-top: 140px;
   z-index: 999;
   transition: transform 0.3s ease-in-out;
   transform: ${(props) =>
