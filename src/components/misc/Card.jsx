@@ -4,12 +4,18 @@ import { cardText } from "../../assets/Texts";
 
 const Card = () => {
   return (
-    <Div>
-      {/* <BsFillGearFill /> */}
-      <CardTitle>{cardText[0].title}</CardTitle>
-      <CardSubTitle>{cardText[0].subTitle}</CardSubTitle>
-      <CardText>{cardText[0].text}</CardText>
-    </Div>
+    <>
+      {cardText.map((card) => (
+        <Div key={card.id}>
+          <CardIcon>
+            <card.icon size={84} color="#fd8642" />
+          </CardIcon>
+          <CardTitle>{card.title}</CardTitle>
+          <CardSubTitle>{card.subTitle}</CardSubTitle>
+          <CardText>{card.text}</CardText>
+        </Div>
+      ))}
+    </>
   );
 };
 

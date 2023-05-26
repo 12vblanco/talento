@@ -6,13 +6,6 @@ const Services = () => {
   return (
     <Div>
       <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
     </Div>
   );
 };

@@ -26,7 +26,7 @@ const LogoContainer = styled.div`
 `;
 
 const LogoImage = styled.img`
-  width: 170px;
+  width: 160px;
   height: auto;
   @media (max-width: 380px) {
     width: 70px;
@@ -34,12 +34,13 @@ const LogoImage = styled.img`
   }
 `;
 
-const LogoText = styled.h1`
+const LogoText = styled.p`
   color: #333;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Montserrat", sans-serif;
   width: 100%;
   margin: 0;
+  margin-top: -6px;
   font-weight: 600;
   @media (max-width: 380px) {
     font-size: 28px;

@@ -1,30 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import video from "../../assets/video/video.mp4";
-import CTAButton from "../misc/CTABUtton";
+import HeroContent from "./HeroContent";
 
 const Hero = () => {
   return (
-    <HeroDiv>
-      {" "}
-      <Div>
-        <VideoPlay src={video} autoPlay loop muted />
-        <Overlay />
-        <DivContent>
-          <Content>
-            <h2>Welcoming TalentO</h2>
-            <Text>
-              We envisage a nimble and adaptable partnership with HR
-              professionals and people managers in curating HR architectures and
-              building people capabilities. As enablers, we commit ourselves to
-              a more pragmatist and personalized approach in working together
-              with partners and clients.{" "}
-            </Text>
-            <CTAButton>{"Brief Us"}</CTAButton>
-          </Content>
-        </DivContent>
-      </Div>
-    </HeroDiv>
+    <>
+      <HeroDiv>
+        {" "}
+        <Div>
+          <VideoPlay src={video} autoPlay loop muted />
+          <Overlay />
+          <DivContent>
+            <HeroContent />
+          </DivContent>
+        </Div>
+      </HeroDiv>
+      {/* <WhiteSpace>"Some quote here"</WhiteSpace> */}
+    </>
   );
 };
 const DivContent = styled.div`
@@ -38,12 +31,7 @@ const DivContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 29%;
-`;
-const Content = styled.div`
-  color: white;
-  width: fit-content;
-  text-align: left;
+  left: 25%;
 `;
 
 const HeroDiv = styled.div`
@@ -85,12 +73,18 @@ const Overlay = styled.div`
   width: 100vw;
   height: calc(100vh - 143px);
   margin-top: 140px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
 `;
 
-const Text = styled.p`
-  max-width: 46%;
-  margin-bottom: 32px;
-`;
+// const WhiteSpace = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background: white;
+//   width: 100%;
+//   height: 60px;
+//   color: #333;
+//   font-style: italic;
+// `;
 
 export default Hero;

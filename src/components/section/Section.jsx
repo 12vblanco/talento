@@ -11,7 +11,7 @@ const Section = () => {
       <Div>
         <Img src={img1} />
         <TextDiv>
-          <H1>About TalentO</H1>
+          <H1>About Talento</H1>
           <H4>Tailored support</H4>
           <P>
             We are a diverse group of HR professionals that provide service and
@@ -24,13 +24,12 @@ const Section = () => {
       </Div>{" "}
       <Div>
         <TextDiv>
-          <H1>Title here</H1>
+          <H1>Talento Services</H1>
           <H4>SubTitle here</H4>
           <P>
-            We are a diverse group of HR professionals that provide service and
-            support to your organization’s Talent Management needs. We aim to be
-            present at any of the stages or in the full cycle of your integrated
-            Talent Management process.
+            We spend time understanding your goals, priorities, and anticipated
+            changes that will affect the talent plans and structures of your
+            organization. We are your talent design and implementing partners.
           </P>
           <CTAButton>Something</CTAButton>
         </TextDiv>{" "}
@@ -51,6 +50,7 @@ const Img = styled.img`
   height: 50vw;
   min-height: 340px;
   min-width: auto;
+  object-fit: cover;
 `;
 const TextDiv = styled.div`
   display: flex;
