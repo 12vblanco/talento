@@ -5,13 +5,12 @@ import CTAButton from "../misc/CTABUtton";
 const HeroContent = () => {
   return (
     <Content>
-      <h2>Welcoming Talento</h2>
+      <h2>Welcome to Talento</h2>
       <Text>
         We envisage a nimble and adaptable partnership with HR professionals and
         people managers in curating HR architectures and building people
-        capabilities. <br />
-        As enablers, we commit ourselves to a more pragmatist and personalized
-        approach in working together with partners and clients.{" "}
+        capabilities. As enablers, we commit ourselves to a more pragmatist and
+        personalized approach in working together with partners and clients.{" "}
       </Text>
       <CTAButton>{"Brief Us"}</CTAButton>
     </Content>
