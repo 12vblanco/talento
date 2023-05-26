@@ -25,7 +25,7 @@ const Section = () => {
       <Div>
         <TextDiv>
           <H1>Talento Services</H1>
-          <H4>Tailored Support</H4>
+          <H4>Tailored Designs</H4>
           <P>
             We spend time understanding your goals, priorities, and anticipated
             changes that will affect the talent plans and structures of your
