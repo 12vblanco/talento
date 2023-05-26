@@ -11,10 +11,8 @@ export function FooterLogo({}) {
         <LogoImage2 src={logo2} alt="Company logo" />
       </LogoRow>
       <Column>
-        {" "}
         <CompanyName>TalentO </CompanyName>
-        <LogoText>Your Bespoke</LogoText>
-        <LogoText>Talent Support</LogoText>{" "}
+        <LogoText>Bespoke Talent Support</LogoText>
       </Column>
     </LogoContainer>
   );
@@ -31,14 +29,14 @@ const LogoRow = styled.div`
   width: fit-content;
   align-items: center;
   justify-content: space-around;
-  margin: 24px 0;
+  margin-bottom: 2rem;
 `;
 
 const LogoImage = styled.img`
   width: inherit;
-  max-width: 90px;
+  max-width: 50px;
   height: auto;
-  margin-right: 1rem;
+  margin-right: 1.2rem;
   @media (max-width: 380px) {
     width: 70px;
     height: 70px;
@@ -46,7 +44,7 @@ const LogoImage = styled.img`
 `;
 
 const LogoImage2 = styled.img`
-  max-width: 160px;
+  max-width: 100px;
 `;
 
 const CompanyName = styled.h1`
@@ -61,14 +59,16 @@ const CompanyName = styled.h1`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const LogoText = styled.h1`
-  font-size: 15px;
+  font-size: 13px;
   text-align: left;
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
+  margin-top: 6px;
   @media (max-width: 380px) {
-    font-size: 28px;
   }
 `;

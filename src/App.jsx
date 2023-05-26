@@ -7,7 +7,7 @@ import Header from "./components/navbar/Header";
 import { About } from "./components/screens/About";
 import { Candidates } from "./components/screens/Candidates";
 import { Home } from "./components/screens/Home";
-// import Terms from "./components/pages/Terms";
+import { Terms } from "./components/screens/Terms";
 
 function scrollToTop() {
   window.scrollTo({
@@ -63,7 +63,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/candidates" element={<Candidates />} />
-        {/* <Route path="/terms" element={<Terms scrollToTop={scrollToTop} />} /> */}
+        <Route path="/terms" element={<Terms scrollToTop={scrollToTop} />} />
       </Routes>
       <Footer scrollToTop={scrollToTop} />
     </>

@@ -1,6 +1,6 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import styled from "styled-components";
+import bgImg from "../../assets/img/footer-bg.jpg";
 import CopyRight from "./Copy";
 import FooterSocial from "./FooterSocial";
 import LogoAddress from "./LogoAddress";
@@ -8,26 +8,46 @@ import Opening from "./Opening";
 
 const Footer = () => {
   return (
-    <>
-      {" "}
-      <FooterContainer>
+    <FooterContainer>
+      <ContentContainer>
         <Div>
           <FooterSocial />
           <Opening />
           <LogoAddress />
         </Div>
-      </FooterContainer>
-      <CopyRight />
-    </>
+      </ContentContainer>
+      <FooterOverlay />
+      <CopyDiv>
+        <CopyRight />
+      </CopyDiv>
+    </FooterContainer>
   );
 };
 
 const FooterContainer = styled.div`
+  position: relative;
   width: 100%;
   height: 420px;
   background: #333;
-  display: flex;
-  flex-direction: column;
+`;
+
+const FooterOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(${bgImg});
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+`;
+
+const ContentContainer = styled.div`
+  position: relative;
+  z-index: 1;
+  height: 100%;
 `;
 
 const Div = styled.div`
@@ -35,24 +55,15 @@ const Div = styled.div`
   align-items: center;
   justify-content: space-evenly;
   color: white;
-  width: 100%;
-  height: fit-content;
-
   height: 100%;
 `;
 
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
+const CopyDiv = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 `;
-
-// const H3 = styled.div`
-//   font-family: "Courgette", cursive;
-//   font-size: 48px;
-//   font-weight: 100;
-//   @media (max-width: 660px) {
-//     font-size: 26px;
-//   }
-// `;
 
 export default Footer;
