@@ -12,7 +12,7 @@ const HeroContent = () => {
         capabilities. As enablers, we commit ourselves to a more pragmatist and
         personalized approach in working together with partners and clients.{" "}
       </Text>
-      <CTAButton>{"Brief Us"}</CTAButton>
+      <CTAButton>{"Contact Us"}</CTAButton>
     </Content>
   );
 };
