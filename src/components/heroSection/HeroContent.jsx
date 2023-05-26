@@ -20,6 +20,7 @@ const Content = styled.div`
   color: white;
   width: fit-content;
   text-align: left;
+  font-weight: 500;
 `;
 const Text = styled.p`
   max-width: 50%;

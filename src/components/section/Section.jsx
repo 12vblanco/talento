@@ -12,26 +12,26 @@ const Section = () => {
         <Img src={img1} />
         <TextDiv>
           <H1>About Talento</H1>
-          <H4>Tailored support</H4>
+          <H4>Professional Talent Management Support</H4>
           <P>
             We are a diverse group of HR professionals that provide service and
             support to your organization’s Talent Management needs. We aim to be
             present at any of the stages or in the full cycle of your integrated
             Talent Management process.
           </P>
-          <CTAButton>Something</CTAButton>
+          <CTAButton>About us</CTAButton>
         </TextDiv>
       </Div>{" "}
       <Div>
         <TextDiv>
           <H1>Talento Services</H1>
-          <H4>SubTitle here</H4>
+          <H4>Tailored Support</H4>
           <P>
             We spend time understanding your goals, priorities, and anticipated
             changes that will affect the talent plans and structures of your
             organization. We are your talent design and implementing partners.
           </P>
-          <CTAButton>Something</CTAButton>
+          <CTAButton>Contact Us</CTAButton>
         </TextDiv>{" "}
         <Img src={img2} />
       </Div>
