@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import CTAButton from "../misc/CTABUtton";
 import Burger from "./Burger";
@@ -18,7 +19,9 @@ export function NavItems({ isOpen, handleToggle }) {
             <NavLink href="/candidates">Candidates</NavLink>
           </NavItem>
           <NavItem>
-            <CTAButton>{"Contact"}</CTAButton>
+            <Link to="/contact">
+              <CTAButton>{"Contact"}</CTAButton>
+            </Link>{" "}
           </NavItem>
         </NavList>
       </Nav>
