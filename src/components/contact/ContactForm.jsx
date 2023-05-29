@@ -66,7 +66,9 @@ const ContactForm = () => {
         </CheckboxLabel>
       </CheckboxContainer>
       <ButtonRow>
-        <CTAButton type="submit">Submit</CTAButton>
+        <CTAButton inverted={true} type="submit">
+          Submit
+        </CTAButton>
       </ButtonRow>
     </Form>
   );
@@ -77,7 +79,6 @@ const Form = styled.form`
   max-width: 600px;
   margin: 0 auto;
   padding: 20px 40px;
-  min-width: 340px;
   max-width: 500px;
   overflow: auto;
   width: 100%;
@@ -91,6 +92,10 @@ const FormRow = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 10px 0;
+  @media (max-width: 440px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 const ButtonRow = styled.div`
   display: flex;
@@ -137,14 +142,22 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })`
 
 const CheckboxLabel = styled.label`
   position: relative;
-  padding-left: 45px;
+  padding-left: 48px;
+  line-height: 1.2;
   cursor: pointer;
   color: black;
+
+  @media (max-width: 440px) {
+    font-size: 13px;
+    padding-left: 42px;
+    margin-bottom: 4px;
+  }
+
   &:before {
     content: "";
     position: absolute;
     left: 0;
-    top: 8px;
+    top: 3px;
     width: 34px;
     height: 34px;
     border: 1px solid #aaa;
@@ -157,7 +170,7 @@ const CheckboxLabel = styled.label`
     content: "";
     position: absolute;
     left: 3px;
-    top: 11px;
+    top: 6px;
     width: 28px;
     height: 28px;
     border-radius: 1px;

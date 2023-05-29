@@ -10,7 +10,6 @@ export function Logo({}) {
         <Link to="/home">
           <LogoImage src={logo} alt="Company logo" />
           <LogoText> Bespoke Talent Support</LogoText>
-          <LogoText></LogoText>
         </Link>
       </Column>
     </LogoContainer>
@@ -29,8 +28,6 @@ const LogoImage = styled.img`
   width: 160px;
   height: auto;
   @media (max-width: 380px) {
-    width: 70px;
-    height: 70px;
   }
 `;
 
@@ -43,7 +40,6 @@ const LogoText = styled.p`
   margin-top: -6px;
   font-weight: 600;
   @media (max-width: 380px) {
-    font-size: 28px;
   }
 `;
 

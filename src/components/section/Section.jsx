@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import img1 from "../../assets/img/hr1.jpg";
 import img2 from "../../assets/img/hr2.jpg";
@@ -22,7 +23,7 @@ const Section = () => {
           <CTAButton>About us</CTAButton>
         </TextDiv>
       </Div>{" "}
-      <Div>
+      <DivColumn>
         <TextDiv>
           <H1>Talento Services</H1>
           <H4>Tailored Designs</H4>
@@ -31,10 +32,12 @@ const Section = () => {
             changes that will affect the talent plans and structures of your
             organization. We are your talent design and implementing partners.
           </P>
-          <CTAButton>Contact Us</CTAButton>
+          <Link to="/contact">
+            <CTAButton>{"Contact Us"}</CTAButton>
+          </Link>{" "}
         </TextDiv>{" "}
         <Img src={img2} />
-      </Div>
+      </DivColumn>
     </>
   );
 };
@@ -43,6 +46,18 @@ const Div = styled.div`
   display: flex;
   width: 100%;
   height: fit-content;
+  background: #333;
+  @media (max-width: 802px) {
+    flex-direction: column-reverse;
+  }
+`;
+
+const DivColumn = styled.div`
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  background: #333;
+  flex-direction: column;
 `;
 
 const Img = styled.img`
@@ -51,6 +66,10 @@ const Img = styled.img`
   min-height: 340px;
   min-width: auto;
   object-fit: cover;
+  @media (max-width: 802px) {
+    width: 100%;
+    min-width: auto;
+  }
 `;
 const TextDiv = styled.div`
   display: flex;
@@ -61,6 +80,15 @@ const TextDiv = styled.div`
   max-height: 50vw;
   overflow: hidden;
   padding: 38px 66px;
+  @media (max-width: 802px) {
+    margin: 32px 0;
+    max-width: 100%;
+    max-height: fit-content;
+    flex: 1;
+  }
+  @media (max-width: 902px) {
+    padding: 12px;
+  }
   @media (max-width: 1060px) {
     padding: 32px;
   }

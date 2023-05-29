@@ -1,34 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import CTAButton from "../misc/CTABUtton";
 import Burger from "./Burger";
 
-export function NavItems({ isOpen, handleToggle }) {
+const NavItems = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const navItems = [
+    { label: "Home", link: "/" },
+    { label: "About", link: "/about" },
+    { label: "Candidates", link: "/candidates" },
+    { label: "Contact", link: "/contact" },
+  ];
+
   return (
     <>
       <Nav>
         <NavList>
-          <NavItem>
-            <NavLink href="/">Home</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/about">About</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/candidates">Candidates</NavLink>
-          </NavItem>
-          <NavItem>
-            <Link to="/contact">
-              <CTAButton>{"Contact"}</CTAButton>
-            </Link>{" "}
-          </NavItem>
+          {navItems.map((item, index) => (
+            <NavItem key={index}>
+              <NavLink to={item.link}>{item.label}</NavLink>
+            </NavItem>
+          ))}
         </NavList>
       </Nav>
-      <Burger handleToggle={handleToggle} isOpen={isOpen} />
+      <Burger handleToggle={handleToggle} isOpen={isOpen} navItems={navItems} />
     </>
   );
-}
+};
 
 const Nav = styled.nav`
   display: flex;
@@ -59,5 +63,5 @@ const NavLink = styled.a`
   color: #333;
   text-decoration: none;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 18px;
 `;

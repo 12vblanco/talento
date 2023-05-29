@@ -24,6 +24,7 @@ const DivContent = styled.div`
   position: absolute;
   width: 100vw;
   height: calc(100vh - 143px);
+  max-height: 700px;
   margin-top: 120px;
   top: 0;
   left: 0;
@@ -31,7 +32,10 @@ const DivContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  left: 25%;
+  left: 22%;
+  @media (max-width: 858px) {
+    left: 8%;
+  }
 `;
 
 const HeroDiv = styled.div`
@@ -40,13 +44,14 @@ const HeroDiv = styled.div`
   align-items: center;
   width: 100vw;
   height: calc(100vh - 143px);
+  max-height: 700px;
   margin-top: 140px;
-  background: blue;
 `;
 
 const Div = styled.div`
   width: 100vw;
   height: calc(100vh - 143px);
+  max-height: 700px;
   margin-top: 0px;
   display: flex;
   flex-direction: column;
@@ -60,12 +65,6 @@ const VideoPlay = styled.video`
   object-fit: cover;
 `;
 
-// const BackImg = styled.img`
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// `;
-
 const Overlay = styled.div`
   position: absolute;
   top: 0;
@@ -75,16 +74,5 @@ const Overlay = styled.div`
   margin-top: 140px;
   background: rgba(0, 0, 0, 0.5);
 `;
-
-// const WhiteSpace = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   background: white;
-//   width: 100%;
-//   height: 60px;
-//   color: #333;
-//   font-style: italic;
-// `;
 
 export default Hero;

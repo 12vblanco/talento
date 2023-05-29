@@ -56,6 +56,9 @@ const Div = styled.div`
   justify-content: space-evenly;
   color: white;
   height: 100%;
+  @media (max-width: 580px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const CopyDiv = styled.div`

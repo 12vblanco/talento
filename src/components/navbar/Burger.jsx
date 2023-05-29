@@ -1,24 +1,14 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { GrInstagram, GrLinkedin } from "react-icons/gr";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Burger = ({ handleToggle, isOpen }) => {
-  // const handleContactClick = () => {
-  //   handleToggle();
-  //   window.location.href = "";
-  // };
-  // const handleCasesClick = () => {
-  //   handleToggle();
-  //   window.location.href = "";
-  // };
-  // const handleServicesClick = () => {
-  //   handleToggle();
-  //   window.location.href = "";
-  // };
+const Burger = ({ handleToggle, isOpen, navItems }) => {
   const handlePrintsClick = () => {
     handleToggle();
   };
+
   return (
     <>
       <BurgerIcon className={isOpen ? "open" : "closed"} onClick={handleToggle}>
@@ -28,24 +18,17 @@ const Burger = ({ handleToggle, isOpen }) => {
       </BurgerIcon>
       <OverlayMenu isOpen={isOpen}>
         <MenuList>
-          {/* <Link> */}
-          <MenuItem>Item1</MenuItem>
-          {/* </Link> */}
-          {/* <Link> */}
-          <MenuItem>Item2</MenuItem>
-          {/* </Link> */}
-          {/* <Link> */}
-          {/* <MenuItem onClick={handleContactClick}>Item3</MenuItem> */}
-          {/* </Link> */}
-          <MenuItem onClick={handlePrintsClick}>
-            <a
-              href=""
-              target="_blank"
-              aria-label="Visit Victor Blanco's Prints Page"
-            >
-              ItemExternal
-            </a>
-          </MenuItem>
+          {navItems.map((item, index) => (
+            <MenuItem key={index} onClick={handleToggle}>
+              {item.external ? (
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  {item.label}
+                </a>
+              ) : (
+                <Link to={item.link}>{item.label}</Link>
+              )}
+            </MenuItem>
+          ))}
           <MenuItem onClick={handleToggle}>
             <a
               href=""
