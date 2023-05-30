@@ -1,5 +1,5 @@
 import React from "react";
-import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/Bs";
+// import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/Bs";
 import styled from "styled-components";
 
 const FooterSocial = () => {
@@ -8,15 +8,9 @@ const FooterSocial = () => {
       <Column>
         <Follow>Follow Us!!</Follow>
         <Row>
-          <Div>
-            <BsFacebook />
-          </Div>
-          <Div>
-            <BsInstagram />
-          </Div>
-          <Div>
-            <BsTwitter />
-          </Div>
+          <Div>{/* <BsFacebook /> */}</Div>
+          <Div>{/* <BsInstagram /> */}</Div>
+          <Div>{/* <BsTwitter /> */}</Div>
         </Row>
       </Column>
     </>
