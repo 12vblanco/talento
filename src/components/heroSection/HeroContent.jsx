@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import CTAButton from "../misc/CTAButton";
+import CTAButton from "../misc/CTABUtton";
 
 const HeroContent = () => {
   return (
