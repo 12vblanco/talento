@@ -50,7 +50,7 @@ const Nav = styled.nav`
   align-items: flex-end;
   padding-right: 10%;
   font-family: "Montserrat", sans-serif;
-  @media (max-width: 760px) {
+  @media (max-width: 899px) {
     display: none;
   }
 `;

@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaFacebook } from "react-icons/fa";
 import { GrInstagram, GrLinkedin } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Burger = ({ handleToggle, isOpen, navItems }) => {
-  const handlePrintsClick = () => {
-    handleToggle();
-  };
+  // const handlePrintsClick = () => {
+  //   handleToggle();
+  // };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -102,7 +114,7 @@ const BurgerIcon = styled.div`
     background: #000;
   }
 
-  @media (min-width: 760px) {
+  @media (min-width: 899px) {
     display: none;
   }
 `;
@@ -155,12 +167,15 @@ const BurgerIconLines = styled.span`
 
 const OverlayMenu = styled.div`
   position: fixed;
+  margin-top: 140px;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background: #fff;
-  margin-top: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 999;
   transition: transform 0.3s ease-in-out;
   transform: ${(props) =>
@@ -178,20 +193,19 @@ const MenuList = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 12%;
-  height: auto;
+  margin-top: -280px;
 `;
 
 const MenuItem = styled.li`
   letter-spacing: -2.8px;
-  margin: 10px;
+  margin: 15px;
   color: #000;
   transition: all 0.5 linear;
 
   a {
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: -1.7px;
-    margin: 10px;
+    margin: 18px;
     color: #000;
     transition: all 0.5 linear;
     @media (max-width: 600px) {
