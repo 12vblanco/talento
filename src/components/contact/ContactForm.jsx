@@ -65,7 +65,7 @@ const ContactForm = () => {
         </CheckboxContainer>
         <ButtonRow>
           <CTAButton inverted={true} type="submit">
-            Submit
+            {"Submit"}
           </CTAButton>
         </ButtonRow>
       </Form>
