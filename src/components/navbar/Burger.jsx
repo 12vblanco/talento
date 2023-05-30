@@ -88,15 +88,13 @@ const BurgerIcon = styled.div`
 
   &.closed .line1 {
     position: absolute;
-    top: 14px;
-    left: 25px;
-    border-radius: 50% 50% 0 0;
+    top: 13px;
+    border-radius: 30% 30% 0 0;
     height: 6px;
   }
   &.closed .line2 {
     position: absolute;
-    top: 28px;
-    left: 25px;
+    top: 29px;
     border-radius: 0 0 22% 22%;
     height: 6px;
   }
@@ -185,24 +183,15 @@ const MenuList = styled.ul`
 `;
 
 const MenuItem = styled.li`
-  font-size: 52px;
-  font-weight: 700;
   letter-spacing: -2.8px;
-  margin: 20px;
+  margin: 10px;
   color: #000;
   transition: all 0.5 linear;
-  @media (max-width: 600px) {
-    font-size: 40px;
-  }
-  @media (max-width: 380px) {
-    font-size: 36px;
-  }
 
   a {
-    font-size: 52px;
+    font-size: 32px;
     letter-spacing: -1.7px;
-    font-weight: 700;
-    margin: 20px;
+    margin: 10px;
     color: #000;
     transition: all 0.5 linear;
     @media (max-width: 600px) {
