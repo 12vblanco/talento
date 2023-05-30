@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import CTAButton from "../misc/CTAButton";
+import CTAButton from "../misc/CTABUtton";
 import Burger from "./Burger";
 
 const NavItems = () => {

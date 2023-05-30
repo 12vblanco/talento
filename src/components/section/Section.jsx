@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import img1 from "../../assets/img/hr1.jpg";
 import img2 from "../../assets/img/hr2.jpg";
-import CTAButton from "../misc/CTAButton";
+import CTAButton from "../misc/CTABUtton";
 
 const Section = () => {
   return (
