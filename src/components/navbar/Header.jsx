@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../misc/Container";
 import { Logo } from "./Logo";
-import { NavItems } from "./NavItems";
+import NavItems from "./NavItems";
 
 // import { FiMenu, FiX } from "react-icons/fi";
 

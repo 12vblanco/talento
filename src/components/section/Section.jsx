@@ -47,7 +47,7 @@ const Div = styled.div`
   width: 100%;
   height: fit-content;
   background: #333;
-  @media (max-width: 802px) {
+  @media (max-width: 903px) {
     flex-direction: column-reverse;
   }
 `;
@@ -57,7 +57,9 @@ const DivColumn = styled.div`
   width: 100%;
   height: fit-content;
   background: #333;
-  flex-direction: column;
+  @media (max-width: 903px) {
+    flex-direction: column;
+  }
 `;
 
 const Img = styled.img`
@@ -66,7 +68,7 @@ const Img = styled.img`
   min-height: 340px;
   min-width: auto;
   object-fit: cover;
-  @media (max-width: 802px) {
+  @media (max-width: 903px) {
     width: 100%;
     min-width: auto;
   }
@@ -80,7 +82,7 @@ const TextDiv = styled.div`
   max-height: 50vw;
   overflow: hidden;
   padding: 38px 66px;
-  @media (max-width: 802px) {
+  @media (max-width: 903px) {
     margin: 32px 0;
     max-width: 100%;
     max-height: fit-content;

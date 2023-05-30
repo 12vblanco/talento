@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import CTAButton from "../misc/CTABUtton";
+import CTAButton from "../misc/CTAButton";
 import Burger from "./Burger";
 
 const NavItems = () => {
@@ -15,18 +15,28 @@ const NavItems = () => {
     { label: "Home", link: "/" },
     { label: "About", link: "/about" },
     { label: "Candidates", link: "/candidates" },
-    { label: "Contact", link: "/contact" },
+    { label: "Contact", link: "/contact", isCTA: true },
   ];
 
   return (
     <>
       <Nav>
         <NavList>
-          {navItems.map((item, index) => (
-            <NavItem key={index}>
-              <NavLink to={item.link}>{item.label}</NavLink>
-            </NavItem>
-          ))}
+          {navItems.map((item, index) =>
+            item.isCTA ? (
+              <NavItem key={index}>
+                <Link to={item.link}>
+                  <CTAButton>{item.label}</CTAButton>
+                </Link>
+              </NavItem>
+            ) : (
+              <Link to={item.link}>
+                <NavItem key={index}>
+                  <NavLink to={item.link}>{item.label}</NavLink>
+                </NavItem>{" "}
+              </Link>
+            )
+          )}
         </NavList>
       </Nav>
       <Burger handleToggle={handleToggle} isOpen={isOpen} navItems={navItems} />
@@ -65,3 +75,5 @@ const NavLink = styled.a`
   font-weight: 600;
   font-size: 18px;
 `;
+
+export default NavItems;
