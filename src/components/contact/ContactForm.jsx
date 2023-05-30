@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import CTAButton from "../misc/CTAButton";
+import CTAButton from "../misc/CTAButton";
 
 const ContactForm = () => {
   return (
@@ -29,10 +29,6 @@ const ContactForm = () => {
           <Label htmlFor="organization">Organization</Label>
           <Input type="text" id="organization" name="organization" />
         </FormRow>
-        {/* <FormRow>
-        <Label htmlFor="designation">Designation*</Label>
-        <Input type="text" id="designation" name="designation" required />
-      </FormRow> */}
         <FormRow>
           <Label htmlFor="email">Email Address*</Label>
           <Input type="email" id="email" name="email" required />
@@ -68,9 +64,9 @@ const ContactForm = () => {
           </CheckboxLabel>
         </CheckboxContainer>
         <ButtonRow>
-          {/* <CTAButton inverted={true} type="submit">
+          <CTAButton inverted={true} type="submit">
             Submit
-          </CTAButton> */}
+          </CTAButton>
         </ButtonRow>
       </Form>
     </Div>

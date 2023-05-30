@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import CTAButton from "../misc/CTAButton";
+import CTAButton from "../misc/CTAButton";
 import Burger from "./Burger";
 
 const NavItems = () => {
@@ -26,7 +26,7 @@ const NavItems = () => {
             item.isCTA ? (
               <NavItem key={index}>
                 <Link to={item.link}>
-                  {/* <CTAButton>{item.label}</CTAButton> */}
+                  <CTAButton>{item.label}</CTAButton>
                 </Link>
               </NavItem>
             ) : (
