@@ -80,12 +80,12 @@ const ContactForm = () => {
 const Div = styled.div`
   display: flex;
   flex-direction: column;
-  padding-left: 20%;
+  width: 100%;
+  align-items: center;
 `;
 
 const Form = styled.form`
   font-family: "Roboto";
-  max-width: 500px;
   margin: 0 auto;
   padding: 10px 30px;
   max-width: 400px;
@@ -94,6 +94,11 @@ const Form = styled.form`
   background: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(233, 123, 27, 0.1);
+  @media (max-width: 440px) {
+    max-width: 100%;
+    width: 100%;
+    min-width: 320px;
+  }
 `;
 
 const FormRow = styled.div`
@@ -120,6 +125,9 @@ const Input = styled.input`
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 15px;
+  @media (max-width: 440px) {
+    width: 80%;
+  }
 `;
 
 const TextArea = styled.textarea`
@@ -130,6 +138,9 @@ const TextArea = styled.textarea`
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 15px;
+  @media (max-width: 440px) {
+    width: 80%;
+  }
 `;
 
 const Label = styled.label`
@@ -160,6 +171,7 @@ const CheckboxLabel = styled.label`
     font-size: 13px;
     padding-left: 42px;
     margin-bottom: 4px;
+    width: 60%;
   }
 
   &:before {
