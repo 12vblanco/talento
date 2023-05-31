@@ -20,38 +20,40 @@ const Card = () => {
 };
 
 const Div = styled.div`
-  width: 26vw;
-  min-width: 320px;
-  height: 26vw;
-  min-height: 340px;
-  background: #fff;
-  margin: 22px;
-  border-radius: 50%;
-  padding: 80px 30px 0px 50px;
-  box-shadow: 4px 6px 8px rgba(3, 3, 3, 0.1);
-  outline: 5px solid #fd8642;
-  color: #333;
+  width: 360px;
+  height: 400px;
+  margin-right: 11px;
+  margin-left: 11px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  border-radius: 38px;
+  padding: 20px 20px 20px 30px;
+  box-shadow: 4px 6px 8px rgba(3, 3, 3, 0.4);
+  outline: 3px solid #393939;
+  color: #fff;
+  background: #333;
 `;
 
 const CardTitle = styled.h1`
-  font-size: 32px;
-  margin: 12px;
+  font-family: "Montserrat";
+  font-size: 26px;
+  font-weight: 700;
 `;
 const CardSubTitle = styled.h3`
-  font-size: 20px;
-  margin: 12px;
-  margin-top: -8px;
+  font-size: 15px;
+  margin: 12px 0;
+  margin-top: 4px;
 `;
 const CardText = styled.p`
-  font-size: 17px;
-  margin: 12px;
-  margin-top: 24px;
+  font-size: 16px;
+  margin-top: 12px;
 `;
 const CardIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   height: 20%;
+  margin-bottom: 12px;
 `;
 
 export default Card;

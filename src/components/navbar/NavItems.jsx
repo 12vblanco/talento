@@ -26,7 +26,7 @@ const NavItems = () => {
             item.isCTA ? (
               <NavItem key={index}>
                 <Link to={item.link}>
-                  <CTAButton>{item.label}</CTAButton>
+                  <Button>{item.label}</Button>
                 </Link>
               </NavItem>
             ) : (
@@ -74,6 +74,10 @@ const NavLink = styled.a`
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
+`;
+
+const Button = styled(CTAButton)`
+  margin-top: -22px !important;
 `;
 
 export default NavItems;

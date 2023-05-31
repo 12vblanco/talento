@@ -16,7 +16,6 @@ const Hero = () => {
           </DivContent>
         </Div>
       </HeroDiv>
-      {/* <WhiteSpace>"Some quote here"</WhiteSpace> */}
     </>
   );
 };

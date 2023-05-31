@@ -32,7 +32,8 @@ const H1 = styled.h1`
   }
 `;
 const Text = styled.p`
-  max-width: 60%;
+  max-width: 58%;
+  margin-bottom: 42px;
 
   @media (max-width: 858px) {
     max-width: 80%;

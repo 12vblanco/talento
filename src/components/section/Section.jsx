@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import img1 from "../../assets/img/hr1.jpg";
-import img2 from "../../assets/img/hr2.jpg";
+import img1 from "../../assets/img/hr3.jpg";
+import img2 from "../../assets/img/hr4.jpg";
 import CTAButton from "../misc/CTABUtton";
 
 const Section = () => {
@@ -13,16 +13,18 @@ const Section = () => {
         <Img src={img1} />
         <TextDiv>
           <H1>About Talento</H1>
-          <H4>Professional Talent Management Support</H4>
+          <H4>Professional Support</H4>
           <P>
             We are a diverse group of HR professionals that provide service and
             support to your organization’s Talent Management needs. We aim to be
             present at any of the stages or in the full cycle of your integrated
             Talent Management process.
           </P>
-          <CTAButton>About us</CTAButton>
+          <Link to="/contact">
+            <CTAButton>{"Contact Us"}</CTAButton>
+          </Link>{" "}
         </TextDiv>
-      </Div>{" "}
+      </Div>
       <DivColumn>
         <TextDiv>
           <H1>Talento Services</H1>
@@ -98,17 +100,18 @@ const TextDiv = styled.div`
 
 const H1 = styled.h1`
   @media (max-width: 1060px) {
-    font-size: 2.6rem;
+    font-size: 1.9rem;
   }
 `;
 const H4 = styled.h4`
   @media (max-width: 1060px) {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 `;
 const P = styled.p`
   @media (max-width: 1060px) {
     font-size: 1.1rem;
+    margin-bottom: 42px;
   }
 `;
 

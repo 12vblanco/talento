@@ -81,7 +81,7 @@ const Div = styled.div`
 `;
 
 const Form = styled.form`
-  font-family: "Roboto";
+  font-family: "Open Sans";
   margin: 0 auto;
   padding: 10px 30px;
   max-width: 400px;

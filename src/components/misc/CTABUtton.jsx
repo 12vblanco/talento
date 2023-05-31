@@ -7,9 +7,8 @@ const CTAButton = (props) => {
 
 const Div = styled.button`
   background-color: ${(props) => (props.inverted ? "#fff" : "#fd8642")};
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   color: ${(props) => (props.inverted ? "#fd8642" : "#fff")};
-  padding: 1rem 1.2rem;
   border: none;
   outline: 2px solid ${(props) => (props.inverted ? "#fd8642" : "transparent")};
   border-radius: 9px;

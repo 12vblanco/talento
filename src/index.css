@@ -14,7 +14,7 @@
 }
 
 a {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-weight: 500;
   color: #fd8642;
   text-decoration: inherit;
@@ -35,51 +35,49 @@ body {
 
 h1 {
   font-family: "Montserrat";
-  font-size: 3.2rem;
-  line-height: 1.1;
-  margin: 8px 0;
+  font-size: 1.9rem;
+  line-height: 1.2;
 }
 
 h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-size: 2.8rem;
   line-height: 1.1;
 }
 
 h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-size: 2.4rem;
-  line-height: 1.1;
+  line-height: 1.4;
 }
 
 h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-size: 1.6rem;
   line-height: 1.1;
   margin: 8px 0;
 }
 
 h5 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-size: 1.6rem;
   line-height: 1.1;
 }
 
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-size: 1.2rem;
   line-height: 1.1;
 }
 
 p {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin-bottom: 2rem;
+  font-family: "OpenSans";
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 button {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   border-radius: 8px;
   outline: 2px solid transparent;
   padding: 0.6em 1.2em;
