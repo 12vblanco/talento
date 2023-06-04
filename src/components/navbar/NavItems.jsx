@@ -13,8 +13,8 @@ const NavItems = () => {
 
   const navItems = [
     { label: "Home", link: "/" },
-    { label: "About", link: "/home#about" },
-    { label: "Services", link: "/home#services" },
+    { label: "About", link: "/#about" },
+    { label: "Services", link: "/#services" },
     { label: "Contact", link: "/contact", isCTA: true },
   ];
 
