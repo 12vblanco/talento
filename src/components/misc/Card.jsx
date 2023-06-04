@@ -35,16 +35,21 @@ const Div = styled.div`
 `;
 
 const CardTitle = styled.h1`
+  text-align: center;
+
   font-family: "Montserrat";
   font-size: 26px;
   font-weight: 700;
 `;
 const CardSubTitle = styled.h3`
+  text-align: center;
+
   font-size: 15px;
   margin: 12px 0;
   margin-top: 4px;
 `;
 const CardText = styled.p`
+  text-align: center;
   font-size: 16px;
   margin-top: 12px;
 `;
