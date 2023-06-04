@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CookieConsent from "react-cookie-consent";
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
@@ -8,18 +8,7 @@ import Header from "./components/navbar/Header";
 import { Home } from "./components/screens/Home";
 import { Terms } from "./components/screens/Terms";
 
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-}
-
 function App() {
-  useEffect(() => {
-    scrollToTop();
-  }, []);
-
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -63,9 +52,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="#about" element={<Home />} />
         <Route path="#services" element={<Home />} />
-        <Route path="/terms" element={<Terms scrollToTop={scrollToTop} />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
-      <Footer scrollToTop={scrollToTop} />
+      <Footer />
     </>
   );
 }

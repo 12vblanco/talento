@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import CTAButton from "../misc/CTABUtton";
 
 const ContactForm = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Div>
-      <h4>Please get in touch</h4>
+      <H4>
+        Let us know how we can work
+        <br />
+        together by sending us a completed form:
+      </H4>
       <Form
         name="contact"
         method="POST"
@@ -21,12 +28,12 @@ const ContactForm = () => {
           </label>
         </p>
         <FormRow>
-          <Label htmlFor="Name"> Name*</Label>
+          <Label htmlFor="Name">Full Name*</Label>
           <Input type="text" id="Name" name="Name" required />
         </FormRow>
         <FormRow>
           {" "}
-          <Label htmlFor="organization">Organization</Label>
+          <Label htmlFor="organization">Organization/{"\n"}Designation</Label>
           <Input type="text" id="organization" name="organization" />
         </FormRow>
         <FormRow>
@@ -36,12 +43,54 @@ const ContactForm = () => {
         <FormRow>
           {" "}
           <Label htmlFor="contactNumber">Contact Number</Label>
-          <Input type="tel" id="contactNumber" name="contactNumber" required />
+          <Input type="tel" id="contactNumber" name="contactNumber" />
         </FormRow>
-        <FormRow>
-          <Label htmlFor="subject">Subject*</Label>
-          <Input type="text" id="subject" name="subject" required />
-        </FormRow>
+        <FormRowCol>
+          <Label htmlFor="support">How can we support you?</Label>
+
+          <Row>
+            <CheckboxContainer>
+              <SupportCheckbox
+                id="recruitment"
+                name="support"
+                value="Recruitment and Selection"
+              />
+              <SupportCheckboxLabel htmlFor="competency">
+                Recruitment and Selection
+              </SupportCheckboxLabel>
+            </CheckboxContainer>
+          </Row>
+          <CheckboxContainer>
+            <SupportCheckbox
+              id="competency"
+              name="support"
+              value="Competency Framework"
+            />
+            <SupportCheckboxLabel htmlFor="competency">
+              Competency Framework
+            </SupportCheckboxLabel>
+          </CheckboxContainer>
+          <CheckboxContainer>
+            <SupportCheckbox
+              id="performance"
+              name="support"
+              value="Performance Management"
+            />
+            <SupportCheckboxLabel htmlFor="performance">
+              Performance Management
+            </SupportCheckboxLabel>
+          </CheckboxContainer>
+          <CheckboxContainer>
+            <SupportCheckbox
+              id="training"
+              name="support"
+              value="Training and Coaching"
+            />
+            <SupportCheckboxLabel htmlFor="training">
+              Training & Coaching
+            </SupportCheckboxLabel>
+          </CheckboxContainer>
+        </FormRowCol>
 
         <FormRow>
           <Label htmlFor="message">Message*</Label>
@@ -73,6 +122,22 @@ const ContactForm = () => {
   );
 };
 
+const SupportCheckboxLabel = styled.label`
+  color: #333;
+  font-family: "Montserrat";
+  font-size: 13px;
+  text-align: center;
+`;
+
+const SupportCheckbox = styled.input.attrs({ type: "checkbox" })`
+  // insert your custom styles here
+`;
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 const Div = styled.div`
   display: flex;
   flex-direction: column;
@@ -98,8 +163,23 @@ const Form = styled.form`
   }
 `;
 
+const H4 = styled.h4`
+  margin-top: 62px;
+`;
+
 const FormRow = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+  @media (max-width: 440px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+const FormRowCol = styled.div`
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 6px 0;
@@ -155,6 +235,18 @@ const Label = styled.label`
   margin-top: 6px;
   width: 228px;
 `;
+const LabelSupport = styled.label`
+  font-family: "Montserrat";
+  font-weight: 600;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin-top: 6px;
+  width: 228px;
+`;
 
 const Checkbox = styled.input.attrs({ type: "checkbox" })`
   display: none;
@@ -196,7 +288,6 @@ const CheckboxLabel = styled.label`
     width: 28px;
     height: 28px;
     border-radius: 1px;
-    /* background: #333; */
     background: rgba(253, 134, 66, 0.7);
     transition: all 0.2s ease;
     opacity: 0;
@@ -207,6 +298,7 @@ const CheckboxLabel = styled.label`
 
 const CheckboxContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   ${Checkbox}:checked + ${CheckboxLabel}:after {

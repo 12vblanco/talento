@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import bgImg from "../../assets/img/about1.jpg";
 import ContactForm from "./ContactForm";

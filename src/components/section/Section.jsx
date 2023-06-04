@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import img1 from "../../assets/img/hr3.jpg";
@@ -6,9 +6,11 @@ import img2 from "../../assets/img/hr4.jpg";
 import CTAButton from "../misc/CTABUtton";
 
 const Section = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
-      {" "}
       <Div id="about">
         <Img src={img1} />
         <TextDiv>
