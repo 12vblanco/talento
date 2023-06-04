@@ -13,8 +13,8 @@ const NavItems = () => {
 
   const navItems = [
     { label: "Home", link: "/" },
-    { label: "About", link: "/about" },
-    { label: "Candidates", link: "/candidates" },
+    { label: "About", link: "/home#about" },
+    { label: "Services", link: "/home#services" },
     { label: "Contact", link: "/contact", isCTA: true },
   ];
 
@@ -24,17 +24,13 @@ const NavItems = () => {
         <NavList>
           {navItems.map((item, index) =>
             item.isCTA ? (
-              <NavItem key={index}>
-                <Link to={item.link}>
-                  <Button>{item.label}</Button>
-                </Link>
-              </NavItem>
-            ) : (
-              <Link to={item.link}>
-                <NavItem key={index}>
-                  <NavLink to={item.link}>{item.label}</NavLink>
-                </NavItem>{" "}
+              <Link key={index} to="/contact">
+                <CTAButton>{"Contact"}</CTAButton>
               </Link>
+            ) : (
+              <NavItem key={index}>
+                <NavLink href={item.link}>{item.label}</NavLink>
+              </NavItem>
             )
           )}
         </NavList>

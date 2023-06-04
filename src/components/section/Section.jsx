@@ -9,7 +9,7 @@ const Section = () => {
   return (
     <>
       {" "}
-      <Div>
+      <Div id="about">
         <Img src={img1} />
         <TextDiv>
           <H1>About Talento</H1>

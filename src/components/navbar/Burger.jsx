@@ -1,13 +1,28 @@
 import React, { useEffect } from "react";
-import { FaFacebook } from "react-icons/fa";
-import { GrInstagram, GrLinkedin } from "react-icons/gr";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Burger = ({ handleToggle, isOpen, navItems }) => {
-  // const handlePrintsClick = () => {
-  //   handleToggle();
-  // };
+const Burger = ({ handleToggle, isOpen }) => {
+  const handleHomeClick = () => {
+    handleToggle();
+    window.location.href = "/home";
+  };
+  const handleContactClick = () => {
+    handleToggle();
+    window.location.href = "/contact";
+  };
+  const handleAboutClick = () => {
+    handleToggle();
+    window.location.href = "/home#about";
+  };
+  const handleServicesClick = () => {
+    handleToggle();
+    window.location.href = "/home#services";
+  };
+  const handleBlankClick = () => {
+    handleToggle();
+  };
 
   useEffect(() => {
     if (isOpen) {
@@ -21,6 +36,11 @@ const Burger = ({ handleToggle, isOpen, navItems }) => {
     };
   }, [isOpen]);
 
+  const navItems = [
+    { label: "Home", link: "/" },
+    { label: "Contact", link: "/contact", isCTA: true },
+  ];
+
   return (
     <>
       <BurgerIcon className={isOpen ? "open" : "closed"} onClick={handleToggle}>
@@ -30,40 +50,56 @@ const Burger = ({ handleToggle, isOpen, navItems }) => {
       </BurgerIcon>
       <OverlayMenu isOpen={isOpen}>
         <MenuList>
-          {navItems.map((item, index) => (
-            <MenuItem key={index} onClick={handleToggle}>
-              {item.external ? (
-                <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  {item.label}
-                </a>
-              ) : (
-                <Link to={item.link}>{item.label}</Link>
-              )}
-            </MenuItem>
-          ))}
-          <MenuItem onClick={handleToggle}>
-            <a
-              href=""
-              target="_blank"
-              aria-label="Visit Victor Blanco's Facebook Page"
-            >
-              <FaFacebook />{" "}
-            </a>
-            <a
-              href=""
-              target="_blank"
-              aria-label="Visit Victor Blanco's Instagram Page"
-            >
-              <GrInstagram />{" "}
-            </a>
-            <a
-              href=""
-              target="_blank"
-              aria-label="Visit Victor Blanco's Linkedin Page"
-            >
-              <GrLinkedin />{" "}
-            </a>
-          </MenuItem>
+          <MenuItem onClick={handleHomeClick}>Home</MenuItem>
+          <MenuItem onClick={handleAboutClick}>About</MenuItem>
+          <MenuItem onClick={handleServicesClick}>Services</MenuItem>
+          <MenuItem onClick={handleContactClick}>Contact</MenuItem>
+          <LinkDiv>
+            {" "}
+            <MenuLink onClick={handleBlankClick}>
+              {" "}
+              <a
+                href="https://www.facebook.com/profile.php?id=100092175527994"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook />{" "}
+              </a>
+            </MenuLink>
+            <MenuLink onClick={handleBlankClick}>
+              {" "}
+              <a
+                href="https://www.linkedin.com/in/bespoke-talento-07390a279/
+              "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />{" "}
+              </a>
+            </MenuLink>
+          </LinkDiv>
+          <LinkDiv>
+            <MenuLink onClick={handleBlankClick}>
+              {" "}
+              <a
+                href="https://twitter.com/Bespoke_TalentO"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter />{" "}
+              </a>
+            </MenuLink>
+            <MenuLink onClick={handleBlankClick}>
+              {" "}
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram />{" "}
+              </a>
+            </MenuLink>
+          </LinkDiv>
         </MenuList>
       </OverlayMenu>
     </>
@@ -196,17 +232,28 @@ const MenuList = styled.ul`
   margin-top: -180px;
 `;
 
-const MenuItem = styled.li`
+const LinkDiv = styled.div`
+  display: flex;
+  margin-top: 14px;
+`;
+
+const MenuItem = styled(Link)`
+  font-size: 30px;
   letter-spacing: -2.8px;
   margin: 15px;
-  color: #000;
+  color: #333;
+  transition: all 0.5 linear;
+`;
+const MenuLink = styled.div`
+  margin: 8px;
+  color: #333;
   transition: all 0.5 linear;
 
   a {
-    font-size: 26px;
+    font-size: 30px;
     letter-spacing: -1.7px;
     margin: 18px;
-    color: #000;
+    color: #333;
     transition: all 0.5 linear;
     @media (max-width: 600px) {
       font-size: 26px;
@@ -215,13 +262,18 @@ const MenuItem = styled.li`
       font-size: 26px;
     }
     &:hover {
-      color: rgb(1, 95, 182);
+      color: #fd8642;
     }
   }
 
   &:hover {
-    color: rgb(1, 95, 182);
+    color: #fd8642;
   }
 `;
+
+// const CustomLink = styled(Link)`
+//   color: inherit;
+//   text-decoration: none;
+// `;
 
 export default Burger;

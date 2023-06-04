@@ -4,7 +4,7 @@ import Card from "../misc/Card";
 
 const Services = () => {
   return (
-    <Div>
+    <Div id="services">
       <Card />
     </Div>
   );

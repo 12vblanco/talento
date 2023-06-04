@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { Contact } from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import Header from "./components/navbar/Header";
-import { Candidates } from "./components/screens/Candidates";
 import { Home } from "./components/screens/Home";
 import { Terms } from "./components/screens/Terms";
 
@@ -62,7 +61,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/candidates" element={<Candidates />} />
+        <Route path="#about" element={<Home />} />
+        <Route path="#services" element={<Home />} />
         <Route path="/terms" element={<Terms scrollToTop={scrollToTop} />} />
       </Routes>
       <Footer scrollToTop={scrollToTop} />
