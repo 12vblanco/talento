@@ -8,6 +8,62 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p hidden>
+        <label>
+          Don’t fill this out if you're human:
+          <input name="bot-field" />
+        </label>
+      </p>
+      <div>
+        <label for="Name">Name*</label>
+        <input type="text" id="Name" name="Name" required />
+      </div>
+      <div>
+        <label for="organization">Organization</label>
+        <input type="text" id="organization" name="organization" />
+      </div>
+      <div>
+        <label for="email">Email Address*</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="contactNumber">Contact Number</label>
+        <input type="tel" id="contactNumber" name="contactNumber" required />
+      </div>
+      <div>
+        <label for="subject">Subject*</label>
+        <input type="text" id="subject" name="subject" required />
+      </div>
+      <div>
+        <label for="message">Message*</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Please tell us about your background, your goals and anything you might consider important"
+          required
+        ></textarea>
+      </div>
+      <div>
+        <input type="checkbox" id="myCheckbox" name="termsAgreement" required />
+        <label for="myCheckbox">
+          I agree to the <a href="/term"><b>terms & conditions</b></a> <br />
+          and to be contacted regarding this message.
+        </label>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
