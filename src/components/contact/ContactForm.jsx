@@ -78,21 +78,22 @@ const Div = styled.div`
   flex-direction: column;
   width: 100%;
   align-items: center;
+  @media (max-width: 400px) {
+    margin-top: 10px;
+  }
 `;
 
 const Form = styled.form`
-  font-family: "Open Sans";
+  font-family: "OpenSans-Medium";
   margin: 0 auto;
-  padding: 10px 30px;
+  padding: 10px 20px;
   max-width: 400px;
   overflow: auto;
-  width: 100%;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(233, 123, 27, 0.1);
   @media (max-width: 440px) {
-    max-width: 100%;
-    width: 100%;
+    width: 100vw;
     min-width: 320px;
   }
 `;
@@ -112,6 +113,9 @@ const ButtonRow = styled.div`
   justify-content: center;
   align-items: center;
   margin: 10px 0;
+  @media (max-width: 440px) {
+    padding-right: 50px;
+  }
 `;
 
 const Input = styled.input`
@@ -149,7 +153,7 @@ const Label = styled.label`
   color: #333;
   display: block;
   margin-top: 6px;
-  width: 220px;
+  width: 228px;
 `;
 
 const Checkbox = styled.input.attrs({ type: "checkbox" })`
@@ -157,6 +161,8 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })`
 `;
 
 const CheckboxLabel = styled.label`
+  font-family: "OpenSans";
+  font-size: 13px;
   position: relative;
   padding-left: 58px;
   line-height: 1.2;
@@ -164,7 +170,6 @@ const CheckboxLabel = styled.label`
   color: black;
 
   @media (max-width: 440px) {
-    font-size: 13px;
     padding-left: 42px;
     margin-bottom: 4px;
     width: 60%;

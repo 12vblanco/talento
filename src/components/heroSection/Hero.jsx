@@ -21,12 +21,8 @@ const Hero = () => {
 };
 const DivContent = styled.div`
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 143px);
-  max-height: 700px;
-  margin-top: 120px;
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;

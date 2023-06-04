@@ -193,7 +193,7 @@ const MenuList = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -280px;
+  margin-top: -180px;
 `;
 
 const MenuItem = styled.li`
@@ -203,16 +203,16 @@ const MenuItem = styled.li`
   transition: all 0.5 linear;
 
   a {
-    font-size: 28px;
+    font-size: 26px;
     letter-spacing: -1.7px;
     margin: 18px;
     color: #000;
     transition: all 0.5 linear;
     @media (max-width: 600px) {
-      font-size: 40px;
+      font-size: 26px;
     }
     @media (max-width: 380px) {
-      font-size: 36px;
+      font-size: 26px;
     }
     &:hover {
       color: rgb(1, 95, 182);
