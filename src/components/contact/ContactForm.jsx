@@ -117,11 +117,15 @@ const ContactForm = () => {
                 name="am"
                 value="Recruitment and Selection"
               />
-              <SupportCheckboxLabel htmlFor="am">AM</SupportCheckboxLabel>
+              <SupportCheckboxLabel htmlFor="am">
+                9:00-15:00
+              </SupportCheckboxLabel>
             </CheckboxContainer>
             <CheckboxContainer>
               <SupportCheckbox id="pm" name="pm" value="PM" />
-              <SupportCheckboxLabel htmlFor="pm">PM</SupportCheckboxLabel>
+              <SupportCheckboxLabel htmlFor="pm">
+                15:00-21:00
+              </SupportCheckboxLabel>
             </CheckboxContainer>
           </Row>{" "}
         </FormRowCol>
@@ -180,20 +184,22 @@ const Form = styled.form`
   font-family: "OpenSans-Medium";
   margin: 0 auto;
   padding: 10px 20px;
-  max-width: 400px;
+  max-width: 490px;
+  width: 98%;
   height: auto;
   overflow: auto;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(233, 123, 27, 0.1);
   @media (max-width: 440px) {
-    width: 100vw;
+    width: 98vw;
     min-width: 320px;
   }
 `;
 
 const H4 = styled.h4`
   margin-top: 62px;
+  padding: 0 24px;
 `;
 
 const FormRow = styled.div`
