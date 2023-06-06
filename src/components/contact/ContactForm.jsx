@@ -46,8 +46,9 @@ const ContactForm = () => {
           <Input type="tel" id="contactNumber" name="contactNumber" />
         </FormRow>
         <FormRowCol>
-          <Label htmlFor="support">How can we support you?</Label>
-
+          <Label style={{ marginTop: "22px" }} htmlFor="support">
+            How can we support you?
+          </Label>
           <Row>
             <CheckboxContainer>
               <SupportCheckbox
@@ -56,40 +57,42 @@ const ContactForm = () => {
                 value="Recruitment and Selection"
               />
               <SupportCheckboxLabel htmlFor="competency">
-                Recruitment and Selection
+                Recruitment & Selection
               </SupportCheckboxLabel>
             </CheckboxContainer>
+            <CheckboxContainer>
+              <SupportCheckbox
+                id="competency"
+                name="support"
+                value="Competency Framework"
+              />
+              <SupportCheckboxLabel htmlFor="competency">
+                Competency Framework
+              </SupportCheckboxLabel>
+            </CheckboxContainer>
+          </Row>{" "}
+          <Row>
+            <CheckboxContainer>
+              <SupportCheckbox
+                id="performance"
+                name="support"
+                value="Performance Management"
+              />
+              <SupportCheckboxLabel htmlFor="performance">
+                Performance Management
+              </SupportCheckboxLabel>
+            </CheckboxContainer>
+            <CheckboxContainer>
+              <SupportCheckbox
+                id="training"
+                name="support"
+                value="Training and Coaching"
+              />
+              <SupportCheckboxLabel htmlFor="training">
+                Training & Coaching
+              </SupportCheckboxLabel>
+            </CheckboxContainer>{" "}
           </Row>
-          <CheckboxContainer>
-            <SupportCheckbox
-              id="competency"
-              name="support"
-              value="Competency Framework"
-            />
-            <SupportCheckboxLabel htmlFor="competency">
-              Competency Framework
-            </SupportCheckboxLabel>
-          </CheckboxContainer>
-          <CheckboxContainer>
-            <SupportCheckbox
-              id="performance"
-              name="support"
-              value="Performance Management"
-            />
-            <SupportCheckboxLabel htmlFor="performance">
-              Performance Management
-            </SupportCheckboxLabel>
-          </CheckboxContainer>
-          <CheckboxContainer>
-            <SupportCheckbox
-              id="training"
-              name="support"
-              value="Training and Coaching"
-            />
-            <SupportCheckboxLabel htmlFor="training">
-              Training & Coaching
-            </SupportCheckboxLabel>
-          </CheckboxContainer>
         </FormRowCol>
 
         <FormRow>
@@ -125,17 +128,18 @@ const ContactForm = () => {
 const SupportCheckboxLabel = styled.label`
   color: #333;
   font-family: "Montserrat";
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 15px;
   text-align: center;
+  max-width: 150px;
 `;
 
-const SupportCheckbox = styled.input.attrs({ type: "checkbox" })`
-  // insert your custom styles here
-`;
+const SupportCheckbox = styled.input.attrs({ type: "checkbox" })``;
 
 const Row = styled.div`
   display: flex;
   flex-direction: row;
+  margin: 12px;
 `;
 
 const Div = styled.div`
@@ -153,6 +157,7 @@ const Form = styled.form`
   margin: 0 auto;
   padding: 10px 20px;
   max-width: 400px;
+  height: auto;
   overflow: auto;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 5px;

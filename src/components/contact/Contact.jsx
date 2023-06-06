@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import bgImg from "../../assets/img/about1.jpg";
 import ContactForm from "./ContactForm";
@@ -13,11 +13,12 @@ export function Contact() {
 
 const Div = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
   background: white;
   background-image: url(${bgImg});
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 60px;
+  padding-top: 110px;
+  padding-bottom: 50px;
 `;
