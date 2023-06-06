@@ -9,7 +9,11 @@
   status = 200
 
 [[redirects]]
-  from = '/home/#about'
+  from = '/contact'
+  to = '/'
+  status = 200
+[[redirects]]
+  from = '/redirect'
   to = '/'
   status = 200
 
