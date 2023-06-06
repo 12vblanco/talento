@@ -46,7 +46,7 @@ const ContactForm = () => {
           <Input type="tel" id="contactNumber" name="contactNumber" />
         </FormRow>
         <FormRowCol>
-          <Label style={{ marginTop: "22px" }} htmlFor="support">
+          <Label style={{ marginTop: "22px", width: "100%" }} htmlFor="support">
             How can we support you?
           </Label>
           <Row>
@@ -96,7 +96,9 @@ const ContactForm = () => {
         </FormRowCol>
 
         <FormRow>
-          <Label htmlFor="message">Message*</Label>
+          <Label htmlFor="message">
+            Please provide basic details about the support. *
+          </Label>
           <TextArea
             id="message"
             name="message"
@@ -104,6 +106,25 @@ const ContactForm = () => {
             required
           />
         </FormRow>
+        <FormRowCol>
+          <Label style={{ marginTop: "22px", width: "100%" }} htmlFor="call">
+            What would be the best time to call for an exploratory talk?
+          </Label>
+          <Row>
+            <CheckboxContainer>
+              <SupportCheckbox
+                id="am"
+                name="am"
+                value="Recruitment and Selection"
+              />
+              <SupportCheckboxLabel htmlFor="am">AM</SupportCheckboxLabel>
+            </CheckboxContainer>
+            <CheckboxContainer>
+              <SupportCheckbox id="pm" name="pm" value="PM" />
+              <SupportCheckboxLabel htmlFor="pm">PM</SupportCheckboxLabel>
+            </CheckboxContainer>
+          </Row>{" "}
+        </FormRowCol>
         <CheckboxContainer>
           <Checkbox id="myCheckbox" />
           <CheckboxLabel htmlFor="myCheckbox">
@@ -139,6 +160,9 @@ const SupportCheckbox = styled.input.attrs({ type: "checkbox" })``;
 const Row = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
   margin: 12px;
 `;
 
