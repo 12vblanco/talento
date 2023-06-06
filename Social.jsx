@@ -1,23 +1,40 @@
 import React from "react";
-import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/Bs";
+import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/Bs";
 import styled from "styled-components";
 
-export function Social({}) {
+export function Social({ backgroundColor }) {
   return (
     <SocialList>
       <SocialItem>
-        <SocialLink href="#">
+        <SocialLink
+          href="https://www.facebook.com/profile.php?id=100092175527994"
+          target="_blank"
+          rel="noopener noreferrer"
+          color={backgroundColor === "#333" ? "#fff" : "#333"}
+        >
           <BsFacebook />
         </SocialLink>
       </SocialItem>
       <SocialItem>
-        <SocialLink href="#">
-          <BsTwitter />
+        <SocialLink
+          href="https://www.linkedin.com/in/bespoke-talento-07390a279/
+"
+          target="_blank"
+          rel="noopener noreferrer"
+          color={backgroundColor === "#333" ? "#fff" : "#333"}
+        >
+          <BsLinkedin />
         </SocialLink>
       </SocialItem>
       <SocialItem>
-        <SocialLink href="#">
-          <BsInstagram />
+        <SocialLink
+          href="https://twitter.com/Bespoke_TalentO
+"
+          target="_blank"
+          rel="noopener noreferrer"
+          color={backgroundColor === "#333" ? "#fff" : "#333"}
+        >
+          <BsTwitter />
         </SocialLink>
       </SocialItem>
     </SocialList>
@@ -38,7 +55,7 @@ const SocialItem = styled.li`
 `;
 
 const SocialLink = styled.a`
-  color: #333;
-  font-size: 1.5rem;
+  color: ${(props) => props.color};
   font-size: 34px;
+  margin: 0 12px;
 `;

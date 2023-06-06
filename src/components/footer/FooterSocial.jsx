@@ -1,6 +1,6 @@
 import React from "react";
-import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 import styled from "styled-components";
+import { Social } from "../../../Social";
 
 const FooterSocial = () => {
   return (
@@ -8,15 +8,7 @@ const FooterSocial = () => {
       <Column>
         <Follow>Follow Us!!</Follow>
         <Row>
-          <Div>
-            <BsFacebook />
-          </Div>
-          <Div>
-            <BsInstagram />
-          </Div>
-          <Div>
-            <BsTwitter />
-          </Div>
+          <Social backgroundColor="#333" />
         </Row>
       </Column>
     </>
@@ -38,11 +30,6 @@ const Row = styled.div`
 const Follow = styled.div`
   display: flex;
   font-size: 42px;
-`;
-const Div = styled.div`
-  display: flex;
-  font-size: 32px;
-  margin: 24px 22px;
 `;
 
 export default FooterSocial;

@@ -111,9 +111,14 @@ const H4 = styled.h4`
   }
 `;
 const P = styled.p`
-  @media (max-width: 1060px) {
-    font-size: 1.1rem;
-    margin-bottom: 42px;
+  max-width: 50%;
+  margin-bottom: 42px;
+
+  @media (max-width: 858px) {
+    max-width: 80%;
+  }
+  @media (max-width: 440px) {
+    max-width: 92%;
   }
 `;
 

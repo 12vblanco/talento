@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import { Contact } from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import ScrollToTop from "./components/misc/ScrollToTop";
 import Header from "./components/navbar/Header";
 import { Home } from "./components/screens/Home";
 import { Terms } from "./components/screens/Terms";
@@ -46,6 +47,8 @@ function App() {
       </CookieConsent>
 
       <Header handleToggle={handleToggle} isOpen={isOpen} />
+      <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />

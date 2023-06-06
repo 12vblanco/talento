@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Social } from "../../../Social";
 
 const Burger = ({ handleToggle, isOpen }) => {
   const handleHomeClick = () => {
@@ -55,50 +55,7 @@ const Burger = ({ handleToggle, isOpen }) => {
           <MenuItem onClick={handleServicesClick}>Services</MenuItem>
           <MenuItem onClick={handleContactClick}>Contact</MenuItem>
           <LinkDiv>
-            {" "}
-            <MenuLink onClick={handleBlankClick}>
-              {" "}
-              <a
-                href="https://www.facebook.com/profile.php?id=100092175527994"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebook />{" "}
-              </a>
-            </MenuLink>
-            <MenuLink onClick={handleBlankClick}>
-              {" "}
-              <a
-                href="https://www.linkedin.com/in/bespoke-talento-07390a279/
-              "
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin />{" "}
-              </a>
-            </MenuLink>
-          </LinkDiv>
-          <LinkDiv>
-            <MenuLink onClick={handleBlankClick}>
-              {" "}
-              <a
-                href="https://twitter.com/Bespoke_TalentO"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter />{" "}
-              </a>
-            </MenuLink>
-            <MenuLink onClick={handleBlankClick}>
-              {" "}
-              <a
-                href="https://www.facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram />{" "}
-              </a>
-            </MenuLink>
+            <Social backgroundColor="#fff" />
           </LinkDiv>
         </MenuList>
       </OverlayMenu>
