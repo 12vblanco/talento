@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import bgImg from "../../assets/img/about1.jpg";
+import ScrollToTop from "../misc/ScrollToTop";
 import ContactForm from "./ContactForm";
 
 export function Contact() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <Div>
+      <ScrollToTop />
+
       <ContactForm />
     </Div>
   );

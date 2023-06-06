@@ -2,10 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import CTAButton from "../misc/CTABUtton";
+import ScrollToTop from "../misc/ScrollToTop";
 
 const ContactForm = () => {
   return (
     <Div>
+      <ScrollToTop />
+
       <H4>
         Let us know how we can work
         <br />

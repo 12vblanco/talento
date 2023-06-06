@@ -47,8 +47,8 @@ function App() {
       </CookieConsent>
 
       <Header handleToggle={handleToggle} isOpen={isOpen} />
-      <ScrollToTop />
 
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
