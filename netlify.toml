@@ -5,12 +5,12 @@
 
 [[redirects]]
   from = '/home#services'
-  to = '/home'
+  to = '/'
   status = 200
 
 [[redirects]]
   from = '/home/#about'
-  to = '/home'
+  to = '/'
   status = 200
 
 [[redirects]]
