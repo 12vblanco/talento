@@ -16,6 +16,11 @@ const Hero = () => {
           </DivContent>
         </Div>
       </HeroDiv>
+      <H4>
+        “Every person is unique, put the right people with the right capability
+        to the right position to solve the right problems.” ― Pearl Zhu, Talent
+        Master
+      </H4>{" "}
     </>
   );
 };
@@ -31,6 +36,23 @@ const DivContent = styled.div`
   @media (max-width: 858px) {
     left: 8%;
   }
+`;
+
+const H4 = styled.div`
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  max-width: 80%;
+  text-align: center;
+  background: white;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #333;
+  padding: 26px;
+  width: 100%;
 `;
 
 const HeroDiv = styled.div`
