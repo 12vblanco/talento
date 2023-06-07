@@ -39,7 +39,7 @@ const Text = styled.p`
     max-width: 80%;
   }
   @media (max-width: 440px) {
-    max-width: 92%;
+    max-width: 90%;
   }
 `;
 

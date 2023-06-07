@@ -26,15 +26,20 @@ const Hero = () => {
 };
 const DivContent = styled.div`
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 143px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   left: 22%;
+
   @media (max-width: 858px) {
     left: 8%;
+  }
+  @media (max-width: 440px) {
+    left: 0%;
+    padding: 22px;
   }
 `;
 
@@ -53,21 +58,20 @@ const H4 = styled.div`
   margin: 0 auto;
   color: #333;
   padding: 26px;
-  /* width: 100%; */
 `;
 
 const HeroDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 143px);
   max-height: 700px;
   margin-top: 140px;
 `;
 
 const Div = styled.div`
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 143px);
   max-height: 700px;
   margin-top: 0px;
@@ -87,7 +91,7 @@ const Overlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 143px);
   margin-top: 140px;
   background: rgba(0, 0, 0, 0.5);

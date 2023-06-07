@@ -187,6 +187,9 @@ const MenuList = styled.ul`
   justify-content: center;
   align-items: center;
   margin-top: -180px;
+  @media (max-width: 440px) {
+    margin-top: -50%;
+  }
 `;
 
 const LinkDiv = styled.div`
