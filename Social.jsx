@@ -1,5 +1,5 @@
 import React from "react";
-import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/Bs";
+import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
 import styled from "styled-components";
 
 export function Social({ backgroundColor }) {
