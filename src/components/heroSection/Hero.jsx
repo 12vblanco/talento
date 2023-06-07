@@ -42,7 +42,7 @@ const H4 = styled.div`
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: italic;
-  max-width: 60%;
+  max-width: 42%;
   text-align: center;
   background: white;
   font-size: 17px;
