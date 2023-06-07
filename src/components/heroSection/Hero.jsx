@@ -18,15 +18,15 @@ const Hero = () => {
       </HeroDiv>
       <H4>
         “Every person is unique, put the right people with the right capability
-        to the right position to solve the right problems.” ― Pearl Zhu, Talent
-        Master
+        to the right position to solve the right problems.” <br /> Pearl Zhu,
+        Talent Master
       </H4>{" "}
     </>
   );
 };
 const DivContent = styled.div`
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: calc(100vh - 143px);
   display: flex;
   flex-direction: column;
@@ -42,7 +42,8 @@ const H4 = styled.div`
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: italic;
-  max-width: 42%;
+  max-width: 560px;
+  min-width: 320px;
   text-align: center;
   background: white;
   font-size: 17px;
@@ -52,7 +53,7 @@ const H4 = styled.div`
   margin: 0 auto;
   color: #333;
   padding: 26px;
-  width: 100%;
+  /* width: 100%; */
 `;
 
 const HeroDiv = styled.div`
