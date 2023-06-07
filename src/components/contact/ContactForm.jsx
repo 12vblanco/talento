@@ -46,21 +46,34 @@ const ContactForm = () => {
           <Input type="tel" id="contactNumber" name="contactNumber" />
         </FormRow>
         <FormRowCol>
-          <Label style={{ marginTop: "22px", width: "100%" }} htmlFor="support">
+          <Label
+            style={{ marginTop: "32px", width: "100%", marginBottom: "22px" }}
+            htmlFor="support"
+          >
             How can we support you?
           </Label>
-          <Row>
-            <CheckboxContainer>
+          <FormRow>
+            <CheckboxContainer style={{ marginTop: "22px", width: "50%" }}>
+              <SupportCheckbox id="job" name="support" value="Job Profile" />
+              <SupportCheckboxLabel htmlFor="job">
+                Job Profile
+              </SupportCheckboxLabel>
+            </CheckboxContainer>
+          </FormRow>
+          <FormRow>
+            <CheckboxContainer style={{ width: "50%" }}>
               <SupportCheckbox
                 id="recruitment"
                 name="support"
                 value="Recruitment and Selection"
               />
-              <SupportCheckboxLabel htmlFor="competency">
+              <SupportCheckboxLabel htmlFor="recruitment">
                 Recruitment & Selection
               </SupportCheckboxLabel>
             </CheckboxContainer>
-            <CheckboxContainer>
+          </FormRow>
+          <FormRow>
+            <CheckboxContainer style={{ width: "50%", marginBottom: "22px" }}>
               <SupportCheckbox
                 id="competency"
                 name="support"
@@ -70,9 +83,9 @@ const ContactForm = () => {
                 Competency Framework
               </SupportCheckboxLabel>
             </CheckboxContainer>
-          </Row>{" "}
-          <Row>
-            <CheckboxContainer>
+          </FormRow>
+          <FormRow>
+            <CheckboxContainer style={{ width: "50%" }}>
               <SupportCheckbox
                 id="performance"
                 name="support"
@@ -82,7 +95,9 @@ const ContactForm = () => {
                 Performance Management
               </SupportCheckboxLabel>
             </CheckboxContainer>
-            <CheckboxContainer>
+          </FormRow>
+          <FormRow>
+            <CheckboxContainer style={{ width: "50%", marginBottom: "22px" }}>
               <SupportCheckbox
                 id="training"
                 name="support"
@@ -91,10 +106,9 @@ const ContactForm = () => {
               <SupportCheckboxLabel htmlFor="training">
                 Training & Coaching
               </SupportCheckboxLabel>
-            </CheckboxContainer>{" "}
-          </Row>
+            </CheckboxContainer>
+          </FormRow>
         </FormRowCol>
-
         <FormRow>
           <Label htmlFor="message">
             Please provide basic details about the support. *
@@ -111,23 +125,19 @@ const ContactForm = () => {
             What would be the best time to call for an exploratory talk?
           </Label>
           <Row>
-            <CheckboxContainer>
-              <SupportCheckbox
-                id="am"
-                name="am"
-                value="Recruitment and Selection"
-              />
+            <CheckboxContainer style={{ margin: "8px 22px" }}>
+              <SupportCheckbox id="am" name="call" value="9:00-15:00" />
               <SupportCheckboxLabel htmlFor="am">
                 9:00-15:00
               </SupportCheckboxLabel>
             </CheckboxContainer>
-            <CheckboxContainer>
-              <SupportCheckbox id="pm" name="pm" value="PM" />
+            <CheckboxContainer style={{ margin: "8px 22px" }}>
+              <SupportCheckbox id="pm" name="call" value="15:00-21:00" />
               <SupportCheckboxLabel htmlFor="pm">
                 15:00-21:00
               </SupportCheckboxLabel>
             </CheckboxContainer>
-          </Row>{" "}
+          </Row>
         </FormRowCol>
         <CheckboxContainer>
           <Checkbox id="myCheckbox" />
@@ -150,6 +160,24 @@ const ContactForm = () => {
   );
 };
 
+const FormRowCol = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 12px;
+  margin: 6px 0;
+  @media (max-width: 400px) {
+    gap: 2px;
+    margin: 2px 0;
+  }
+`;
+
+const FormRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const SupportCheckboxLabel = styled.label`
   color: #333;
   font-family: "Montserrat";
@@ -168,6 +196,9 @@ const Row = styled.div`
   width: 100%;
   justify-content: space-evenly;
   margin: 12px;
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 const Div = styled.div`
@@ -200,29 +231,12 @@ const Form = styled.form`
 const H4 = styled.h4`
   margin-top: 62px;
   padding: 0 24px;
+  @media (max-width: 440px) {
+    margin-top: 42px;
+    font-size: 18px;
+  }
 `;
 
-const FormRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 6px 0;
-  @media (max-width: 440px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`;
-const FormRowCol = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: 6px 0;
-  @media (max-width: 440px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`;
 const ButtonRow = styled.div`
   display: flex;
   justify-content: center;
@@ -262,18 +276,6 @@ const Label = styled.label`
   font-family: "Montserrat";
   font-weight: 600;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 16px;
-  color: #333;
-  display: block;
-  margin-top: 6px;
-  width: 228px;
-`;
-const LabelSupport = styled.label`
-  font-family: "Montserrat";
-  font-weight: 600;
-  display: block;
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
@@ -346,4 +348,5 @@ const TermsLabel = styled.label`
   font-size: 14px;
   color: #333;
 `;
+
 export default ContactForm;
