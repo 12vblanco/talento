@@ -1,11 +1,11 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import CTAButton from "../misc/CTABUtton";
 import ScrollToTop from "../misc/ScrollToTop";
 
 const ContactForm = () => {
-  let navigate = useNavigate();
+  const history = useHistory();
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -16,7 +16,7 @@ const ContactForm = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => navigate("/Success"))
+      .then(() => history.push("/Success")) // Update the route to your success page
       .catch((error) => alert(error));
   };
   return (
