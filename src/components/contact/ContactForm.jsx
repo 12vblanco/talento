@@ -1,23 +1,24 @@
 import React from "react";
-import { Link, navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import CTAButton from "../misc/CTABUtton";
 import ScrollToTop from "../misc/ScrollToTop";
 
-const submitHandler = (e) => {
-  e.preventDefault();
-  let myForm = document.getElementById("contact-form");
-  let formData = new FormData(myForm);
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => navigate("/Success"))
-    .catch((error) => alert(error));
-};
-
 const ContactForm = () => {
+  let navigate = useNavigate();
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    let myForm = document.getElementById("contact-form");
+    let formData = new FormData(myForm);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => navigate("/Success"))
+      .catch((error) => alert(error));
+  };
   return (
     <Div>
       <ScrollToTop />
