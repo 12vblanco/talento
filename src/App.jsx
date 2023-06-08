@@ -21,11 +21,12 @@ function App() {
       <CookieConsent
         containerClasses="cookie_container"
         style={{
-          background: "rgba(2, 60, 113, 0.9)",
+          fontFamily: "Montserrat",
+          background: "rgba(51, 51, 51,.9)",
           fontWeight: "500",
-          height: "10vh",
+          height: "fit-content",
           alignItems: "center",
-          fontSize: "18px",
+          fontSize: "17px",
         }}
         buttonStyle={{
           borderRadius: "50px",
@@ -35,12 +36,12 @@ function App() {
           background: "white",
           color: "rgb(2, 60, 113)",
         }}
-        contentStyle={{ textAlign: "left", marginBottom: "12px" }}
+        contentStyle={{ textAlign: "left", marginBottom: "18px" }}
       >
         This website uses cookies and third party software to monitor traffic
         anonymously and improve user experience. For more info read my{" "}
         <Span>
-          <a href="/terms" aria-label="Visit Victor Blanco's Terms Page">
+          <a href="/terms" aria-label="Terms Page">
             terms & conditions
           </a>
         </Span>

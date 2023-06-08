@@ -4,6 +4,19 @@ import styled from "styled-components";
 import CTAButton from "../misc/CTABUtton";
 import ScrollToTop from "../misc/ScrollToTop";
 
+const submitHandler = (e) => {
+  e.preventDefault();
+  let myForm = document.getElementById("contact-form");
+  let formData = new FormData(myForm);
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => navigate("/Success"))
+    .catch((error) => alert(error));
+};
+
 const ContactForm = () => {
   return (
     <Div>
@@ -19,6 +32,8 @@ const ContactForm = () => {
         method="POST"
         data-netlify="true"
         netlify-honeypot="bot-field"
+        data-netlify-recaptcha="true"
+        onSubmit={submitHandler}
       >
         <input type="hidden" name="form-name" value="contact" />
         <p hidden>
