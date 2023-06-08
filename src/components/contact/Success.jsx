@@ -8,12 +8,14 @@ function Success() {
   };
   return (
     <Div>
-      <h1>Hi TalentO partner!! Thank you for submitting the form!</h1>
+      <H1>Hi TalentO partner!! Thank you for submitting the form!</H1>
       <Text>
-        We are thrilled to have you show interest in Talento. We will get back
-        to you in no time. Wishing you an amazing day ahead! Talento Team
+        We are thrilled to have you show interest in Talento. <br />
+        We will get back to you in no time. <br />
+        Wishing you an amazing day ahead! <br />
+        Talento Team
       </Text>
-      <CTAButton onClick={handleBackHome} tagName={"Go Back!"} />{" "}
+      <CTAButton onClick={handleBackHome}> {"Go Back"}</CTAButton>
     </Div>
   );
 }
@@ -24,13 +26,21 @@ const Div = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 90vh;
-  border-bottom: solid 1px #000;
-  border-right: solid 1px #000;
+  height: fit-content;
 `;
 
+const H1 = styled.h2`
+  font-family: "Montserrat";
+  margin-top: 184px;
+  margin-bottom: 4px;
+  color: #333;
+  max-width: 80%;
+`;
 const Text = styled.p`
+  font-family: "Montserrat";
   margin-bottom: 44px;
+  color: #333;
+  max-width: 80%;
 `;
 
 export default Success;
