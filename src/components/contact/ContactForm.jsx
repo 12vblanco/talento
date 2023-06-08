@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, navigate } from "react-router-dom";
 import styled from "styled-components";
 import CTAButton from "../misc/CTABUtton";
 import ScrollToTop from "../misc/ScrollToTop";
