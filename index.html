@@ -60,9 +60,19 @@
         </label>
       </div>
       <div>
-        <button type="submit">Submit</button>
+        <button type="submit" onclick="showSuccessMessage()">Submit</button>
       </div>
     </form>
+
+    <div id="successMessage" style="display: none">
+      Thank you for your message! We will be in touch shortly.
+    </div>
+
+    <script>
+      function showSuccessMessage() {
+        document.getElementById("successMessage").style.display = "block";
+      }
+    </script>
 
     <script type="module" src="/src/main.jsx"></script>
   </body>
