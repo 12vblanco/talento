@@ -51,7 +51,7 @@ const Div = styled.div`
   width: 100%;
   height: fit-content;
   background: #333;
-  @media (max-width: 903px) {
+  @media (max-width: 971px) {
     flex-direction: column-reverse;
   }
 `;
@@ -61,7 +61,7 @@ const DivColumn = styled.div`
   width: 100%;
   height: fit-content;
   background: #333;
-  @media (max-width: 903px) {
+  @media (max-width: 971px) {
     flex-direction: column;
   }
 `;
@@ -72,7 +72,7 @@ const Img = styled.img`
   min-height: 340px;
   min-width: auto;
   object-fit: cover;
-  @media (max-width: 903px) {
+  @media (max-width: 971px) {
     width: 100%;
     min-width: auto;
   }
@@ -82,7 +82,6 @@ const TextDiv = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  max-width: 50vw;
   max-height: 50vw;
   overflow: hidden;
   padding: 38px 66px;
@@ -90,6 +89,9 @@ const TextDiv = styled.div`
     margin: 32px 0;
     max-width: 100%;
     max-height: fit-content;
+    justify-content: center;
+    align-items: center;
+
     flex: 1;
   }
   @media (max-width: 902px) {
@@ -111,10 +113,9 @@ const H4 = styled.h4`
   }
 `;
 const P = styled.p`
-  max-width: 50%;
   margin-bottom: 42px;
 
-  @media (max-width: 858px) {
+  @media (max-width: 971px) {
     max-width: 80%;
   }
   @media (max-width: 440px) {

@@ -21,7 +21,7 @@ const HeroContent = () => {
 };
 const Content = styled.div`
   color: white;
-  width: fit-content;
+  width: 100%;
   text-align: left;
   font-weight: 500;
 `;

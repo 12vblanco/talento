@@ -19,6 +19,7 @@ const Div = styled.div`
   height: fit-content;
   background: white;
   background-image: url(${bgImg});
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: flex-start;

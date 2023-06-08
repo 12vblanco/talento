@@ -28,32 +28,40 @@ const ContactForm = () => {
           </label>
         </p>
         <FormRow>
-          <Label htmlFor="Name">Full Name*</Label>
+          <Label style={{ width: "100%" }} htmlFor="Name">
+            Full Name*
+          </Label>
           <Input type="text" id="Name" name="Name" required />
         </FormRow>
         <FormRow>
           {" "}
-          <Label htmlFor="organization">Organization/{"\n"}Designation</Label>
+          <Label style={{ width: "100%" }} htmlFor="organization">
+            Organization/{"\n"}Designation
+          </Label>
           <Input type="text" id="organization" name="organization" />
         </FormRow>
         <FormRow>
-          <Label htmlFor="email">Email Address*</Label>
+          <Label style={{ width: "100%" }} htmlFor="email">
+            Email Address*
+          </Label>
           <Input type="email" id="email" name="email" required />
         </FormRow>
         <FormRow>
           {" "}
-          <Label htmlFor="contactNumber">Contact Number</Label>
+          <Label style={{ width: "100%" }} htmlFor="contactNumber">
+            Contact Number
+          </Label>
           <Input type="tel" id="contactNumber" name="contactNumber" />
         </FormRow>
         <FormRowCol>
           <Label
-            style={{ marginTop: "32px", width: "100%", marginBottom: "22px" }}
+            style={{ marginTop: "12px", width: "100%", marginBottom: "2px" }}
             htmlFor="support"
           >
             How can we support you?
           </Label>
           <FormRow>
-            <CheckboxContainer style={{ marginTop: "22px", width: "50%" }}>
+            <CheckboxContainer style={{ marginTop: "12px", width: "50%" }}>
               <SupportCheckbox id="job" name="support" value="Job Profile" />
               <SupportCheckboxLabel htmlFor="job">
                 Job Profile
@@ -73,7 +81,7 @@ const ContactForm = () => {
             </CheckboxContainer>
           </FormRow>
           <FormRow>
-            <CheckboxContainer style={{ width: "50%", marginBottom: "22px" }}>
+            <CheckboxContainer style={{ width: "50%", marginBottom: "12px" }}>
               <SupportCheckbox
                 id="competency"
                 name="support"
@@ -97,7 +105,7 @@ const ContactForm = () => {
             </CheckboxContainer>
           </FormRow>
           <FormRow>
-            <CheckboxContainer style={{ width: "50%", marginBottom: "22px" }}>
+            <CheckboxContainer style={{ width: "50%", marginBottom: "12px" }}>
               <SupportCheckbox
                 id="training"
                 name="support"
@@ -110,7 +118,7 @@ const ContactForm = () => {
           </FormRow>
         </FormRowCol>
         <FormRow>
-          <Label htmlFor="message">
+          <Label style={{ marginTop: "32px", width: "100%" }} htmlFor="message">
             Please provide basic details about the support. *
           </Label>
           <TextArea
@@ -120,28 +128,27 @@ const ContactForm = () => {
             required
           />
         </FormRow>
-        <FormRowCol>
-          <Label style={{ marginTop: "22px", width: "100%" }} htmlFor="call">
-            What would be the best time to call for an exploratory talk?
+        <FormRow>
+          <Label
+            style={{ marginTop: "12px", width: "100%" }}
+            htmlFor="callTime"
+          >
+            What would be the best time to call for an exploratory talk? Please
+            specify timezone.
           </Label>
-          <Row>
-            <CheckboxContainer style={{ margin: "8px 22px" }}>
-              <SupportCheckbox id="am" name="call" value="9:00-15:00" />
-              <SupportCheckboxLabel htmlFor="am">
-                9:00-15:00
-              </SupportCheckboxLabel>
-            </CheckboxContainer>
-            <CheckboxContainer style={{ margin: "8px 22px" }}>
-              <SupportCheckbox id="pm" name="call" value="15:00-21:00" />
-              <SupportCheckboxLabel htmlFor="pm">
-                15:00-21:00
-              </SupportCheckboxLabel>
-            </CheckboxContainer>
-          </Row>
-        </FormRowCol>
+          <TextArea
+            style={{ height: "44px", marginBottom: "12px" }}
+            id="callTime"
+            name="callTime"
+          />
+        </FormRow>
+
         <CheckboxContainer>
           <Checkbox id="myCheckbox" />
-          <CheckboxLabel htmlFor="myCheckbox">
+          <CheckboxLabel
+            style={{ height: "40px", marginBottom: "8px", paddingTop: "4px" }}
+            htmlFor="myCheckbox"
+          >
             I agree to the{" "}
             <Link to="/term">
               <b>terms & conditions</b>
@@ -164,7 +171,7 @@ const FormRowCol = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
-  gap: 12px;
+  gap: 10px;
   margin: 6px 0;
   @media (max-width: 400px) {
     gap: 2px;
@@ -220,7 +227,7 @@ const Form = styled.form`
   height: auto;
   overflow: auto;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(233, 123, 27, 0.1);
   @media (max-width: 440px) {
     width: 98vw;
@@ -229,8 +236,8 @@ const Form = styled.form`
 `;
 
 const H4 = styled.h4`
-  margin-top: 62px;
-  padding: 0 24px;
+  margin-top: 52px;
+  color: #333;
   @media (max-width: 440px) {
     margin-top: 42px;
     font-size: 18px;

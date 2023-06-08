@@ -10,9 +10,11 @@ const Card = () => {
           <CardIcon>
             <card.icon size={84} color="#fd8642" />
           </CardIcon>
-          <CardTitle>{card.title}</CardTitle>
-          <CardSubTitle>{card.subTitle}</CardSubTitle>
-          <CardText>{card.text}</CardText>
+          <Column>
+            <CardTitle>{card.title}</CardTitle>
+            <CardSubTitle>{card.subTitle}</CardSubTitle>
+            <CardText>{card.text}</CardText>
+          </Column>
         </Div>
       ))}
     </>
@@ -21,7 +23,8 @@ const Card = () => {
 
 const Div = styled.div`
   width: 360px;
-  height: 400px;
+  height: fit-content;
+  min-height: 440px;
   margin-right: 11px;
   margin-left: 11px;
   margin-top: 22px;
@@ -34,23 +37,27 @@ const Div = styled.div`
   background: #333;
 `;
 
-const CardTitle = styled.h1`
-  text-align: center;
+const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+`;
 
+const CardTitle = styled.h1`
   font-family: "Montserrat";
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
 `;
 const CardSubTitle = styled.h3`
-  text-align: center;
-
-  font-size: 15px;
-  margin: 12px 0;
+  font-size: 16px;
+  margin: 0px 0;
   margin-top: 4px;
 `;
 const CardText = styled.p`
-  text-align: center;
-  font-size: 16px;
+  font-size: 17px;
   margin-top: 12px;
 `;
 const CardIcon = styled.div`
