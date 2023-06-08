@@ -1,10 +1,12 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import CTAButton from "../misc/CTABUtton";
 import ScrollToTop from "../misc/ScrollToTop";
 
-const ContactForm = ({ history }) => {
+const ContactForm = () => {
+  let navigate = useNavigate();
+
   const submitHandler = (e) => {
     e.preventDefault();
     let myForm = document.getElementById("contact-form");
@@ -14,7 +16,7 @@ const ContactForm = ({ history }) => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => history.push("/Success")) // Update the route to your success page
+      .then(() => navigate("/Success"))
       .catch((error) => alert(error));
   };
   return (
@@ -27,6 +29,7 @@ const ContactForm = ({ history }) => {
         together by sending us a completed form:
       </H4>
       <Form
+        id="contact-form"
         name="contact"
         method="POST"
         data-netlify="true"
@@ -370,4 +373,4 @@ const TermsLabel = styled.label`
   color: #333;
 `;
 
-export default withRouter(ContactForm);
+export default ContactForm;
