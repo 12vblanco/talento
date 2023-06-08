@@ -1,12 +1,10 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import CTAButton from "../misc/CTABUtton";
 import ScrollToTop from "../misc/ScrollToTop";
 
-const ContactForm = () => {
-  const history = useHistory();
-
+const ContactForm = ({ history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     let myForm = document.getElementById("contact-form");
@@ -372,4 +370,4 @@ const TermsLabel = styled.label`
   color: #333;
 `;
 
-export default ContactForm;
+export default withRouter(ContactForm);
