@@ -103,7 +103,8 @@ const Terms = () => {
         </ol>
         <P>
           If you have any questions or comments regarding these terms and
-          conditions, please contact us using the contact form on our website.
+          conditions, please contact us using the <a href="/contact">contact</a>{" "}
+          form on our website.
         </P>
         <Btn>
           <Link to="/home">
