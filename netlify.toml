@@ -9,6 +9,10 @@
   status = 200
 
 [[redirects]]
+  from = '/terms'
+  to = '/'
+  status = 200
+[[redirects]]
   from = '/contact'
   to = '/'
   status = 200
