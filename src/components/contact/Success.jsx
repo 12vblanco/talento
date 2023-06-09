@@ -49,7 +49,7 @@ const Div = styled.div`
 
 const H1 = styled.h2`
   font-family: "Montserrat";
-  margin-top: 184px;
+  margin-top: 14px;
   margin-bottom: 14px;
   color: #333;
   @media (max-width: 550px) {
