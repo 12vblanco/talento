@@ -8,7 +8,7 @@ import Footer from "./components/footer/Footer";
 import ScrollToTop from "./components/misc/ScrollToTop";
 import Header from "./components/navbar/Header";
 import { Home } from "./components/screens/Home";
-import { Terms } from "./components/screens/Terms";
+import Terms from "./components/screens/Terms";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);

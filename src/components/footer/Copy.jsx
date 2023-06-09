@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import ScrollToTop from "../misc/ScrollToTop";
 
 const CopyRight = () => {
   return (
@@ -14,8 +15,9 @@ const CopyRight = () => {
           Web Victor Blanco {new Date().getFullYear()} &copy; {"  "}
           {"  "}
         </A>
-        {"  "}
-        <Link to="/terms">Terms & Conditions</Link>
+        <Link to="/terms" onClick={ScrollToTop}>
+          Terms & Conditions
+        </Link>
       </H4>
     </CopyDiv>
   );

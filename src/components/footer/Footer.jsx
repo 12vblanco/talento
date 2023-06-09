@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import bgImg from "../../assets/img/footer-bg.jpg";
+import ScrollToTop from "../misc/ScrollToTop";
 import CopyRight from "./Copy";
 import FooterSocial from "./FooterSocial";
 import LogoAddress from "./LogoAddress";
@@ -8,19 +9,21 @@ import Opening from "./Opening";
 
 const Footer = () => {
   return (
-    <FooterContainer>
-      <ContentContainer>
-        <Div>
-          <FooterSocial />
-          <Opening />
-          <LogoAddress />
-        </Div>
-      </ContentContainer>
-      <FooterOverlay />
-      <CopyDiv>
-        <CopyRight />
-      </CopyDiv>
-    </FooterContainer>
+    <>
+      <FooterContainer>
+        <ContentContainer>
+          <Div>
+            <FooterSocial />
+            <Opening />
+            <LogoAddress />
+          </Div>
+        </ContentContainer>
+        <FooterOverlay />
+        <CopyDiv>
+          <CopyRight />
+        </CopyDiv>
+      </FooterContainer>
+    </>
   );
 };
 
