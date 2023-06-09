@@ -4,7 +4,7 @@ import CTAButton from "../misc/CTABUtton";
 
 function Success() {
   const handleBackHome = () => {
-    window.location.href = "/";
+    window.location.href = "/home";
   };
   return (
     <Div>
@@ -27,6 +27,9 @@ const Div = styled.div`
   flex-direction: column;
   width: 100%;
   height: fit-content;
+  @media (max-width: 550px) {
+    padding: 32px 0;
+  }
 `;
 
 const H1 = styled.h2`
@@ -35,12 +38,22 @@ const H1 = styled.h2`
   margin-bottom: 4px;
   color: #333;
   max-width: 80%;
+  @media (max-width: 550px) {
+    max-width: 90%;
+    padding: 0 8px;
+    margin-top: 144px;
+    margin-bottom: 22px;
+  }
 `;
 const Text = styled.p`
   font-family: "Montserrat";
   margin-bottom: 44px;
   color: #333;
   max-width: 80%;
+  @media (max-width: 550px) {
+    margin-bottom: 42px;
+    max-width: 90%;
+  }
 `;
 
 export default Success;
