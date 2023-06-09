@@ -63,6 +63,7 @@ function App() {
       <Footer />
     </>
   );
+  ``;
 }
 
 const Span = styled.span`

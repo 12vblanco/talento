@@ -190,7 +190,7 @@ const FormRowCol = styled.div`
   grid-template-rows: repeat(3, auto);
   gap: 10px;
   margin: 6px 0;
-  @media (max-width: 400px) {
+  @media (max-width: 555px) {
     gap: 2px;
     margin: 2px 0;
   }
@@ -213,25 +213,14 @@ const SupportCheckboxLabel = styled.label`
 
 const SupportCheckbox = styled.input.attrs({ type: "checkbox" })``;
 
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  justify-content: space-evenly;
-  margin: 12px;
-  @media (max-width: 400px) {
-    flex-direction: column;
-  }
-`;
-
 const Div = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
-  @media (max-width: 400px) {
+  @media (max-width: 555px) {
     margin-top: 10px;
+    max-width: 100vw;
   }
 `;
 
@@ -246,8 +235,9 @@ const Form = styled.form`
   background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(233, 123, 27, 0.1);
-  @media (max-width: 440px) {
-    width: 98vw;
+  @media (max-width: 550px) {
+    width: 90%;
+    margin: 0 4px;
     min-width: 320px;
   }
 `;
@@ -255,9 +245,10 @@ const Form = styled.form`
 const H4 = styled.h4`
   margin-top: 52px;
   color: #333;
-  @media (max-width: 440px) {
+  @media (max-width: 550px) {
     margin-top: 42px;
     font-size: 18px;
+    padding-left: 12px;
   }
 `;
 
@@ -266,8 +257,9 @@ const ButtonRow = styled.div`
   justify-content: center;
   align-items: center;
   margin: 10px 0;
-  @media (max-width: 440px) {
+  @media (max-width: 550px) {
     padding-right: 50px;
+    margin-top: 32px;
   }
 `;
 
@@ -278,8 +270,8 @@ const Input = styled.input`
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 15px;
-  @media (max-width: 440px) {
-    width: 80%;
+  @media (max-width: 550px) {
+    width: 98%;
   }
 `;
 
@@ -292,7 +284,7 @@ const TextArea = styled.textarea`
   border-radius: 5px;
   font-size: 15px;
   @media (max-width: 440px) {
-    width: 80%;
+    width: 98%;
   }
 `;
 
@@ -322,10 +314,10 @@ const CheckboxLabel = styled.label`
   cursor: pointer;
   color: black;
 
-  @media (max-width: 440px) {
+  @media (max-width: 550px) {
     padding-left: 42px;
     margin-bottom: 4px;
-    width: 60%;
+    width: 70%;
   }
 
   &:before {
@@ -366,11 +358,6 @@ const CheckboxContainer = styled.div`
     opacity: 1;
     transform: scale(1);
   }
-`;
-
-const TermsLabel = styled.label`
-  font-size: 14px;
-  color: #333;
 `;
 
 export default ContactForm;

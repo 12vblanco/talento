@@ -25,4 +25,7 @@ const Div = styled.div`
   justify-content: flex-start;
   padding-top: 110px;
   padding-bottom: 50px;
+  @media (max-width: 555px) {
+    max-width: 100vw;
+  }
 `;
