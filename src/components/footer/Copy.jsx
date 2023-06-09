@@ -16,7 +16,7 @@ const CopyRight = () => {
           {"  "}
         </A>
         <Link to="/terms" onClick={ScrollToTop}>
-          Terms & Conditions
+          <Terms>Terms & Conditions</Terms>
         </Link>
       </H4>
     </CopyDiv>
@@ -47,6 +47,7 @@ const Terms = styled.div`
   align-items: center;
   font-size: 14px;
   margin-left: 4px;
+  color: #fd8642;
 `;
 
 const A = styled.a`

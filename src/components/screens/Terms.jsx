@@ -1,15 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import CTAButton from "../misc/CTABUtton";
+import ScrollToTop from "../misc/ScrollToTop";
 
 const Terms = () => {
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate(-1);
+  };
   return (
     <>
-      {/* <ScrollToTop /> */}
-
       <Div>
-        <H1 id="termsTop">Terms and Conditions</H1>
+        <H1>Terms and Conditions</H1>
         <H4>
           <b>
             Welcome to Talento! <b />
@@ -106,10 +110,8 @@ const Terms = () => {
           conditions, please contact us using the <a href="/contact">contact</a>{" "}
           form on our website.
         </P>
-        <Btn>
-          <Link to="/home">
-            <CTAButton>{"Go back"}</CTAButton>
-          </Link>
+        <Btn onClick={handleGoBack}>
+          <CTAButton onClick={ScrollToTop}>{"Go back"}</CTAButton>
         </Btn>
       </Div>
     </>

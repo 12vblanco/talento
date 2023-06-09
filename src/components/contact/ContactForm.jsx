@@ -167,7 +167,7 @@ const ContactForm = () => {
             htmlFor="myCheckbox"
           >
             I agree to the{" "}
-            <Link to="/term">
+            <Link to="/terms">
               <b>terms & conditions</b>
             </Link>{" "}
             <br />
