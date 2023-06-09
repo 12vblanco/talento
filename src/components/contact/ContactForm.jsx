@@ -79,7 +79,11 @@ const ContactForm = () => {
           </Label>
           <FormRow>
             <CheckboxContainer style={{ marginTop: "12px", width: "50%" }}>
-              <SupportCheckbox id="job" name="support" value="Job Profile" />
+              <SupportCheckbox
+                id="job"
+                name="support"
+                value="Type of support"
+              />
               <SupportCheckboxLabel htmlFor="job">
                 Job Profile
               </SupportCheckboxLabel>

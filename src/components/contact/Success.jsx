@@ -1,11 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import CTAButton from "../misc/CTABUtton";
 
 function Success() {
-  const handleBackHome = () => {
-    window.location.href = "/home";
-  };
   return (
     <Container>
       <Div>
@@ -16,7 +14,9 @@ function Success() {
           <br />
           Talento Team
         </Text>
-        <CTAButton onClick={handleBackHome}> {"Go Back"}</CTAButton>
+        <Link to="/home">
+          <CTAButton> {"To Home"}</CTAButton>
+        </Link>
       </Div>
     </Container>
   );
