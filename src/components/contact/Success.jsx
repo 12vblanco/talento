@@ -27,7 +27,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
+  padding-top: 40px;
   @media (max-width: 499px) {
     /* margin-top: 12%; */
     padding: 5%;
@@ -42,7 +43,7 @@ const Div = styled.div`
   padding: 0 10%;
   line-height: 1.5;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   @media (max-width: 499px) {
     margin-top: 12%;
     padding: 5%;
