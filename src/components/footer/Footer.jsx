@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import bgImg from "../../assets/img/footer-bg.jpg";
-import ScrollToTop from "../misc/ScrollToTop";
 import CopyRight from "./Copy";
 import FooterSocial from "./FooterSocial";
 import LogoAddress from "./LogoAddress";
@@ -29,7 +28,7 @@ const Footer = () => {
 
 const FooterContainer = styled.div`
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 420px;
   background: #333;
 `;
