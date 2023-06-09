@@ -27,8 +27,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
+  height: 100vh;
   @media (max-width: 499px) {
-    margin-top: 12%;
+    /* margin-top: 12%; */
     padding: 5%;
   }
 `;
@@ -38,9 +39,10 @@ const Div = styled.div`
   align-items: center;
   flex-direction: column;
   color: #333;
-  padding: 14% 10%;
+  padding: 0 10%;
   line-height: 1.5;
   width: 100vw;
+  height: 100vh;
   @media (max-width: 499px) {
     margin-top: 12%;
     padding: 5%;
@@ -49,7 +51,7 @@ const Div = styled.div`
 
 const H1 = styled.h2`
   font-family: "Montserrat";
-  margin-top: 14px;
+  /* margin-top: 14px; */
   margin-bottom: 14px;
   color: #333;
   @media (max-width: 550px) {
