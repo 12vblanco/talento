@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,11 +23,11 @@
         </label>
       </p>
       <div>
-        <label for="Name">Name*</label>
+        <label for="Name">Full Name*</label>
         <input type="text" id="Name" name="Name" required />
       </div>
       <div>
-        <label for="organization">Organization</label>
+        <label for="organization">Organization/Designation</label>
         <input type="text" id="organization" name="organization" />
       </div>
       <div>
@@ -37,14 +36,45 @@
       </div>
       <div>
         <label for="contactNumber">Contact Number</label>
-        <input type="tel" id="contactNumber" name="contactNumber" required />
+        <input type="tel" id="contactNumber" name="contactNumber" />
       </div>
       <div>
-        <label for="subject">Subject*</label>
-        <input type="text" id="subject" name="subject" required />
+        <label>How can we support you?</label>
+        <input type="checkbox" id="job" name="support" value="Job Profile" />
+        <label for="job">Job Profile</label>
+        <input
+          type="checkbox"
+          id="recruitment"
+          name="support"
+          value="Recruitment and Selection"
+        />
+        <label for="recruitment">Recruitment & Selection</label>
+        <input
+          type="checkbox"
+          id="competency"
+          name="support"
+          value="Competency Framework"
+        />
+        <label for="competency">Competency Framework</label>
+        <input
+          type="checkbox"
+          id="performance"
+          name="support"
+          value="Performance Management"
+        />
+        <label for="performance">Performance Management</label>
+        <input
+          type="checkbox"
+          id="training"
+          name="support"
+          value="Training and Coaching"
+        />
+        <label for="training">Training & Coaching</label>
       </div>
       <div>
-        <label for="message">Message*</label>
+        <label for="message"
+          >Please provide basic details about the support. *</label
+        >
         <textarea
           id="message"
           name="message"
@@ -53,9 +83,16 @@
         ></textarea>
       </div>
       <div>
+        <label for="callTime">
+          What would be the best time to call for an exploratory talk? Please
+          specify timezone.
+        </label>
+        <textarea style="height: 44px" id="callTime" name="callTime"></textarea>
+      </div>
+      <div>
         <input type="checkbox" id="myCheckbox" name="termsAgreement" required />
         <label for="myCheckbox">
-          I agree to the <a href="/term"><b>terms & conditions</b></a> <br />
+          I agree to the <a href="/terms"><b>terms & conditions</b></a> <br />
           and to be contacted regarding this message.
         </label>
       </div>
