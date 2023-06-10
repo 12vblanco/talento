@@ -9,8 +9,9 @@ function Success() {
       <Div>
         <H1>Hi TalentO Partner,</H1>
         <Text>
-          We are thrilled to have you show interest in Talento. We will get back
-          to you in no time. Wishing you an amazing day ahead!
+          We have received your form and are thrilled to see that you have shown
+          interest in Talento. We will get back to you in no time <br />
+          Wishing you an amazing day ahead!
           <br />
           Talento Team
         </Text>
