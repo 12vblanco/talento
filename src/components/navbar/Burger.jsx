@@ -152,7 +152,7 @@ const BurgerIconLines = styled.span`
 
   &:nth-child(3) {
     top: 21.2px;
-    left: 9;
+    left: 18;
     height: 3.6px;
     transform-origin: center;
   }

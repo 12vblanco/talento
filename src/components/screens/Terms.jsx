@@ -124,7 +124,7 @@ const Div = styled.div`
   align-items: center;
   flex-direction: column;
   color: #333;
-  padding: 14% 10%;
+  padding: 18% 10%;
   line-height: 1.5;
   @media (max-width: 499px) {
     margin-top: 12%;
