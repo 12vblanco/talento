@@ -83,6 +83,7 @@ const ContactForm = () => {
                 id="job"
                 name="support"
                 value="Type of support"
+                style={{ width: "24px", height: "24px" }}
               />
               <SupportCheckboxLabel htmlFor="job">
                 Job Profile
@@ -95,6 +96,7 @@ const ContactForm = () => {
                 id="recruitment"
                 name="support"
                 value="Recruitment and Selection"
+                style={{ width: "24px", height: "24px" }}
               />
               <SupportCheckboxLabel htmlFor="recruitment">
                 Recruitment & Selection
@@ -107,6 +109,7 @@ const ContactForm = () => {
                 id="competency"
                 name="support"
                 value="Competency Framework"
+                style={{ width: "24px", height: "24px" }}
               />
               <SupportCheckboxLabel htmlFor="competency">
                 Competency Framework
@@ -119,6 +122,7 @@ const ContactForm = () => {
                 id="performance"
                 name="support"
                 value="Performance Management"
+                style={{ width: "24px", height: "24px" }}
               />
               <SupportCheckboxLabel htmlFor="performance">
                 Performance Management
@@ -126,11 +130,12 @@ const ContactForm = () => {
             </CheckboxContainer>
           </FormRow>
           <FormRow>
-            <CheckboxContainer style={{ width: "50%", marginBottom: "12px" }}>
+            <CheckboxContainer style={{ width: "50%" }}>
               <SupportCheckbox
                 id="training"
                 name="support"
                 value="Training and Coaching"
+                style={{ width: "24px", height: "24px" }}
               />
               <SupportCheckboxLabel htmlFor="training">
                 Training & Coaching
@@ -139,7 +144,7 @@ const ContactForm = () => {
           </FormRow>
         </FormRowCol>
         <FormRow>
-          <Label style={{ marginTop: "32px", width: "100%" }} htmlFor="message">
+          <Label style={{ marginTop: "22px", width: "100%" }} htmlFor="message">
             Please provide basic details about the support. *
           </Label>
           <TextArea
@@ -274,6 +279,7 @@ const Input = styled.input`
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 15px;
+
   @media (max-width: 550px) {
     width: 98%;
   }
