@@ -19,8 +19,8 @@ const Terms = () => {
             Welcome to Talento! <b />
           </b>
           <br /> <br />
-          These terms and conditions outline the rules and regulations for the
-          use of our website. By accessing this website, we assume you accept
+          These terms and conditions outline the rules & regulations for the use
+          of Talento's website. By accessing the website, we assume you accept
           these terms and conditions in full. <br />
           <b>
             Please do not continue to use Talento's website if you do not accept
@@ -39,39 +39,39 @@ const Terms = () => {
           <Li>
             Cookies and Tracking:
             <P>
-              We use cookies on this website. By using Talento's website, you
-              consent to the use of cookies in accordance with Talento's Privacy
-              Policy. Our Cookie Policy and Privacy Policy explain what cookies
-              are, how we use them, and how we protect your privacy. You can
-              find this information on our website. We may also use tracking
-              technologies such as Google Analytics to gather information about
-              your usage of our website. This information helps us analyze
-              trends, administer the site, track user movements, and gather
-              demographic information.
+              We employ cookies on this website. Your utilization of Talento's
+              website implies your consent to the utilization of cookies as
+              outlined in Talento's Privacy Policy. For detailed information
+              regarding cookies, their usage, and privacy protection, kindly
+              refer to our Cookie Policy and Privacy Policy available on our
+              website. Additionally, we may employ tracking technologies like
+              Google Analytics to collect data about your website usage. This
+              data aids us in analysing trends, administering the site, tracking
+              user activities, and gathering demographic information.
             </P>
           </Li>
           <Li>
             Personal Data Collection and Processing:
             <P>
               When you submit a form or contact us through our website, we may
-              collect personal information such as your name, email address,
-              contact number, organization/designation, and other relevant
-              details. We use this information to process your requests and
-              provide you with the requested services. We are committed to
-              protecting your privacy and handling your personal information
-              securely. Please refer to Talento's Privacy Policy for more
-              information on how we collect, use, and protect your personal
-              data.
+              gather personal information including your name, email address,
+              contact number, organization/designation, and other pertinent
+              details. This information is utilized to process your requests and
+              furnish you with the services you have requested. Safeguarding
+              your privacy and ensuring the secure handling of your personal
+              information is our utmost priority. For further details on how we
+              collect, use, and protect your personal data, kindly refer to
+              Talento's Privacy Policy.
             </P>
           </Li>
           <Li>
             Intellectual Property Rights:
             <P>
-              Unless otherwise stated, Talento and/or its licensors own the
-              intellectual property rights for all materials on this website.
-              All intellectual property rights are reserved. You may access this
-              from Talento for your personal use, subject to restrictions set in
-              these terms and conditions.
+              Unless stated otherwise, all materials on this website are owned
+              by Talento and/or its licensors, and all intellectual property
+              rights are reserved. You may access these materials from Talento
+              for personal use, but you are subject to the restrictions set
+              forth in the terms and conditions.
             </P>
           </Li>
           <Li>
@@ -97,11 +97,10 @@ const Terms = () => {
           <Li>
             Disclaimer:
             <P>
-              The materials on Talento's website are provided on an "as is"
-              basis. Talento makes no warranties, expressed or implied, and
-              hereby disclaims and negates all other warranties, including
-              without limitation, implied warranties or conditions of
-              merchantability.
+              The materials on Talento's website are provided on an "as-is"
+              basis. We make no warranties, expressed or implied, and hereby
+              disclaims and negates all of other warranties, including without
+              limitation, implied warranties or conditions of merchantability.
             </P>
           </Li>
         </ol>
