@@ -7,10 +7,10 @@ function Success() {
   return (
     <Container>
       <Div>
-        <H1>Hi TalentO partner!! Thank you for submitting the form!</H1>
+        <H1>Hi TalentO Partner,</H1>
         <Text>
-          We are thrilled to have you show interest in Talento. <br />
-          We will get back to you in no time. Wishing you an amazing day ahead!{" "}
+          We are thrilled to have you show interest in Talento. We will get back
+          to you in no time. Wishing you an amazing day ahead!
           <br />
           Talento Team
         </Text>
