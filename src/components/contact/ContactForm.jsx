@@ -78,7 +78,9 @@ const ContactForm = () => {
             How can we support you?
           </Label>
           <FormRow>
-            <CheckboxContainer style={{ marginTop: "12px", width: "50%" }}>
+            <CheckboxContainer
+              style={{ marginTop: "12px", width: "50%", marginBottom: "18px" }}
+            >
               <SupportCheckbox
                 id="job"
                 name="support"
@@ -91,7 +93,7 @@ const ContactForm = () => {
             </CheckboxContainer>
           </FormRow>
           <FormRow>
-            <CheckboxContainer style={{ width: "50%" }}>
+            <CheckboxContainer style={{ width: "50%", marginBottom: "12px" }}>
               <SupportCheckbox
                 id="recruitment"
                 name="support"
