@@ -51,6 +51,30 @@ const Terms = () => {
             </P>
           </Li>
           <Li>
+            Data Privacy Compliance:{" "}
+            <P>
+              By using our services, you entrust us with your personal
+              information, and we take this responsibility very seriously. We
+              adhere strictly to the Data Privacy Act of 2012 (Republic Act No.
+              10173) of the Philippines in handling, processing, and storing
+              your data. Our internal policies ensure that your personal
+              information is safeguarded against unauthorized access,
+              alteration, disclosure, or destruction. We will retain your
+              personal information only for as long as is required by the
+              relevant laws and regulations. Furthermore, we respect your rights
+              to be informed, access, and object to the processing of your
+              personal data, and to rectify, erase, or block any inaccuracies or
+              inadequacies in your personal data as stipulated in the law. By
+              continuing to use our services, you express your understanding and
+              compliance with these terms. This version attempts to be more
+              comprehensive but it's still important to have legal counsel
+              review and possibly customize it in line with the specifics of
+              your service or product and the data protection laws. It is
+              crucial to make sure that the terms and conditions are compliant
+              with the law.
+            </P>
+          </Li>
+          <Li>
             Personal Data Collection and Processing:
             <P>
               When you submit a form or contact us through our website, we may
