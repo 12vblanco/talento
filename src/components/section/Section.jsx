@@ -85,21 +85,24 @@ const TextDiv = styled.div`
   max-height: 50vw;
   overflow: hidden;
   padding: 38px 66px;
+``
   @media (max-width: 903px) {
     margin: 32px 0;
     max-width: 100%;
     max-height: fit-content;
     justify-content: center;
     align-items: center;
+    padding: 12px;
 
     flex: 1;
   }
-  @media (max-width: 902px) {
-    padding: 12px;
+  @media (max-width: 440px) {
+    align-items: flex-start;
+    margin-left: 12px;
   }
-  @media (max-width: 1060px) {
+  /* @media (max-width: 1060px) {
     padding: 32px;
-  }
+  } */
 `;
 
 const H1 = styled.h1`
@@ -110,6 +113,9 @@ const H1 = styled.h1`
 const H4 = styled.h4`
   @media (max-width: 1060px) {
     font-size: 1.5rem;
+  }
+  @media (max-width: 440px) {
+    text-align: left;
   }
 `;
 const P = styled.p`
