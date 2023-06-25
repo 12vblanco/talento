@@ -22,10 +22,12 @@ const Terms = () => {
           These terms and conditions outline the rules & regulations for the use
           of Talento's website. By accessing the website, we assume you accept
           these terms and conditions in full. <br />
+          <br />
           <b>
             Please do not continue to use Talento's website if you do not accept
             all of the terms and conditions stated on this page.
           </b>{" "}
+          <br />
           <br />
           The following terminology applies to these Terms and Conditions,
           Privacy Statement, and Disclaimer Notice and any or all Agreements:
@@ -66,12 +68,7 @@ const Terms = () => {
               personal data, and to rectify, erase, or block any inaccuracies or
               inadequacies in your personal data as stipulated in the law. By
               continuing to use our services, you express your understanding and
-              compliance with these terms. This version attempts to be more
-              comprehensive but it's still important to have legal counsel
-              review and possibly customize it in line with the specifics of
-              your service or product and the data protection laws. It is
-              crucial to make sure that the terms and conditions are compliant
-              with the law.
+              compliance with these terms.
             </P>
           </Li>
           <Li>
