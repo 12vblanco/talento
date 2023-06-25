@@ -150,7 +150,7 @@ const Div = styled.div`
   padding: 18% 10%;
   line-height: 1.5;
   @media (max-width: 499px) {
-    margin-top: 12%;
+    margin-top: 24%;
     padding: 5%;
   }
 `;
