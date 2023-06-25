@@ -24,9 +24,9 @@ const ContactForm = () => {
       <ScrollToTop />
 
       <H4>
-        Let us know how we can work
+        Let us know how we can work together
         <br />
-        together by sending us a completed form:
+        by sending us a completed form:
       </H4>
       <Form
         id="contact-form"
@@ -255,11 +255,14 @@ const Form = styled.form`
 
 const H4 = styled.h4`
   margin-top: 52px;
+  width: 530px;
   color: #333;
+  padding-left: 40px;
   @media (max-width: 550px) {
     margin-top: 42px;
+    width: 100%;
     font-size: 18px;
-    padding-left: 12px;
+    padding-left: 32px;
   }
 `;
 
