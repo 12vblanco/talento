@@ -158,6 +158,7 @@ const Div = styled.div`
 const Li = styled.li`
   font-family: "Montserrat";
   font-weight: 500;
+  font-size: 18px;
 `;
 
 const Btn = styled.h1`
@@ -173,7 +174,7 @@ const H1 = styled.h1`
   font-weight: 700;
   text-align: left;
 `;
-const H4 = styled.h4`
+const H4 = styled.p`
   font-family: "OpenSans";
   margin: 20px auto;
   font-weight: 500;

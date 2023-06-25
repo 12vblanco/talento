@@ -29,6 +29,7 @@ const CopyDiv = styled.div`
   display: flex;
   max-width: fit-content;
   margin: 0 auto;
+  padding-bottom: 8px;
 `;
 
 const H4 = styled.div`
