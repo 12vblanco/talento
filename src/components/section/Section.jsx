@@ -85,7 +85,7 @@ const TextDiv = styled.div`
   max-height: 50vw;
   overflow: hidden;
   padding: 38px 66px;
-``
+
   @media (max-width: 903px) {
     margin: 32px 0;
     max-width: 100%;
