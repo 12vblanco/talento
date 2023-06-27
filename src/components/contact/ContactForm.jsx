@@ -261,8 +261,9 @@ const H4 = styled.h4`
   @media (max-width: 550px) {
     margin-top: 42px;
     width: 100%;
-    font-size: 18px;
-    padding-left: 32px;
+    font-size: 17px;
+    padding-left: 12px;
+    width: 360px;
   }
 `;
 
