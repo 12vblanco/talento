@@ -1,5 +1,5 @@
 import React from "react";
-import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 import styled from "styled-components";
 
 export function Social({ backgroundColor }) {
@@ -17,13 +17,12 @@ export function Social({ backgroundColor }) {
       </SocialItem>
       <SocialItem>
         <SocialLink
-          href="https://www.linkedin.com/in/bespoke-talento-07390a279/
-"
+          href="https://instagram.com/bespoke_talento?igshid=MjAxZDBhZDhlNA=="
           target="_blank"
           rel="noopener noreferrer"
           color={backgroundColor === "#333" ? "#fff" : "#333"}
         >
-          <BsLinkedin />
+          <BsInstagram />
         </SocialLink>
       </SocialItem>
       <SocialItem>
