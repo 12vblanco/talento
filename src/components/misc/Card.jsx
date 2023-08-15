@@ -30,11 +30,19 @@ const Div = styled.div`
   margin-top: 22px;
   margin-bottom: 22px;
   border-radius: 38px;
+  background: #333;
   padding: 20px 20px 20px 30px;
   box-shadow: 4px 6px 8px rgba(3, 3, 3, 0.4);
   outline: 3px solid #393939;
   color: #fff;
   background: #333;
+  transition: all 0.5s;
+
+  &:hover {
+    box-shadow: 0 3.75em 5em -1.875em rgba(0, 0, 0, 0.4);
+    background: #4d4d4d;
+    outline: 1px solid #4d4d4d;
+  }
 `;
 
 const Column = styled.div`
