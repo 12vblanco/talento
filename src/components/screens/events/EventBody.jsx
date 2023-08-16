@@ -31,9 +31,6 @@ const Div = styled.div`
   padding-bottom: 50px;
   border-radius: 10px;
   color: #000;
-  @media (max-width: 555px) {
-    max-width: 100vw;
-  }
 `;
 
 const EventContainer = styled.div`

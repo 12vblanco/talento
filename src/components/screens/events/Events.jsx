@@ -13,7 +13,7 @@ export function Events() {
 }
 
 const Div = styled.div`
-  width: 100vw;
+  width: 100%;
   height: fit-content;
   background: white;
   display: flex;
@@ -21,7 +21,4 @@ const Div = styled.div`
   justify-content: center;
   padding-top: 160px;
   padding-bottom: 50px;
-  @media (max-width: 555px) {
-    max-width: 100vw;
-  }
 `;

@@ -45,13 +45,14 @@ export function AdminLogin() {
   );
 }
 const LoginContainer = styled.div`
-  position: absolute;
+  /* position: absolute;
   top: 12px;
-  right: 12px;
+  right: 12px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 32px;
+  width: 100%;
+  /* margin-right: 32px; */
 `;
 
 const LoginText = styled.div`
