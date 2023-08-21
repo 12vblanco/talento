@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ScrollToTop from "../../misc/ScrollToTop";
 import { EventBody } from "./EventBody";
 
-export function Events() {
+export default function Events() {
   return (
     <Div>
       <ScrollToTop />
