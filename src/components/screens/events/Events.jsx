@@ -3,14 +3,14 @@ import styled from "styled-components";
 import ScrollToTop from "../../misc/ScrollToTop";
 import { EventBody } from "./EventBody";
 
-export default function Events() {
+const Events = () => {
   return (
     <Div>
       <ScrollToTop />
       <EventBody />
     </Div>
   );
-}
+};
 
 const Div = styled.div`
   width: 100%;
@@ -22,3 +22,4 @@ const Div = styled.div`
   padding-top: 160px;
   padding-bottom: 50px;
 `;
+export default Events;
