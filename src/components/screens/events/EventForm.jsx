@@ -1,25 +1,60 @@
-import React from "react";
+import { getDatabase, onValue, ref } from "firebase/database";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-export function EventForm() {
+export function EventForm({ series, title, date, link }) {
+  const [eventData, setEventData] = useState(null);
+
+  useEffect(() => {
+    const db = getDatabase();
+    const eventRef = ref(db, "events");
+
+    const unsubscribe = onValue(eventRef, (snapshot) => {
+      setEventData(snapshot.val());
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
   return (
     <>
-      <Series>Talento Breakfast Series</Series>
-      <Title>Developing Job Description</Title>
-      <Date>15th July 2023 / Saturday / 9-10am</Date>
-      <Link>Link to google forms</Link>
+      <Series>{eventData ? eventData.series : series}</Series>
+      <Title>{eventData ? eventData.title : title}</Title>
+      <Date>{eventData ? eventData.date : date}</Date>
+      <LinkStyled
+        href={eventData ? eventData.link : link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Google Link
+      </LinkStyled>
     </>
   );
 }
 
 const Series = styled.h1`
   font-family: "Hurricane-Regular";
-  font-size: 36px;
+  text-transform: capitalize;
+  font-size: 38px;
 `;
 const Title = styled.h2`
   font-family: "Montserrat";
-  font-size: 46px;
+  text-transform: uppercase;
+  font-size: 42px;
   font-weight: 900;
+  @media (max-width: 599px) {
+    font-size: 28px;
+  }
 `;
-const Date = styled.p``;
-const Link = styled.p``;
+const Date = styled.p`
+  font-weight: 700;
+`;
+const LinkStyled = styled.a`
+  cursor: pointer;
+  color: black;
+  &:hover {
+    color: white;
+  }
+`;

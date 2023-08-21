@@ -1,16 +1,61 @@
-import React from "react";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+import { React, useEffect, useState } from "react";
 import styled from "styled-components";
 import bgImgBk from "../../../assets/img/about1.jpg";
 import { AdminLogin } from "./AdminLogin";
 import { EventForm } from "./EventForm";
 
 export function EventBody() {
+  const [series, setSeries] = useState("");
+  const [title, setTitle] = useState("");
+  const [date, setDate] = useState("");
+  const [link, setLink] = useState("");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const db = getFirestore();
+      const eventDoc = doc(db, "events", "fixedEventId");
+
+      try {
+        const docSnap = await getDoc(eventDoc);
+
+        if (docSnap.exists()) {
+          setSeries(docSnap.data().series);
+          setTitle(docSnap.data().title);
+          setDate(docSnap.data().date);
+          setLink(docSnap.data().link);
+        } else {
+          console.log("No such document!");
+        }
+      } catch (error) {
+        console.error("Error getting document:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <Div>
-      <AdminLogin />
+      <AdminLogin
+        series={series}
+        setSeries={setSeries}
+        title={title}
+        setTitle={setTitle}
+        date={date}
+        setDate={setDate}
+        link={link}
+        setLink={setLink}
+      />
 
       <EventContainer>
-        <EventForm />
+        <EventForm
+          series={series}
+          title={title}
+          date={date}
+          link={link}
+          setSeries={setSeries}
+        />
       </EventContainer>
     </Div>
   );
@@ -27,10 +72,14 @@ const Div = styled.div`
   align-items: center;
   justify-content: flex-end;
   text-align: center;
-  padding-top: 70px;
+  padding-top: 20px;
   padding-bottom: 50px;
   border-radius: 10px;
   color: #000;
+  @media (max-width: 899px) {
+    width: 96vw;
+    margin: 0 auto;
+  }
 `;
 
 const EventContainer = styled.div`

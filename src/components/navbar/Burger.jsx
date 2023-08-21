@@ -107,7 +107,7 @@ const BurgerIcon = styled.div`
     background: #000;
   }
 
-  @media (min-width: 899px) {
+  @media (min-width: 900px) {
     display: none;
   }
 `;
@@ -230,10 +230,5 @@ const MenuLink = styled.div`
     color: #fd8642;
   }
 `;
-
-// const CustomLink = styled(Link)`
-//   color: inherit;
-//   text-decoration: none;
-// `;
 
 export default Burger;
