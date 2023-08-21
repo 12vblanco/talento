@@ -2,14 +2,14 @@ import { useState } from "react";
 import CookieConsent from "react-cookie-consent";
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import { Contact } from "./components/contact/Contact";
-import Success from "./components/contact/Success";
 import Footer from "./components/footer/Footer";
 import ScrollToTop from "./components/misc/ScrollToTop";
 import Header from "./components/navbar/Header";
 import { Home } from "./components/screens/Home";
 import Terms from "./components/screens/Terms";
-
+import { Contact } from "./components/screens/contact/Contact";
+import Success from "./components/screens/contact/Success";
+import { Events } from "./components/screens/events/Events";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -55,7 +55,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="#about" element={<Home />} />
+        {/* <Route path="#about" element={<Home />} /> */}
+        <Route path="/events" element={<Events />} />
         <Route path="#services" element={<Home />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/Success" element={<Success />} />
