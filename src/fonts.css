@@ -130,3 +130,10 @@
   font-weight: 600;
   font-style: italic;
 }
+
+@font-face {
+  font-family: "Hurricane-Regular";
+  src: url("/fonts/Hurricane-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

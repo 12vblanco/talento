@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import bgImg from "../../assets/img/about1.jpg";
-import ScrollToTop from "../misc/ScrollToTop";
+import bgImg from "../../../assets/img/about1.jpg";
+import ScrollToTop from "../../misc/ScrollToTop";
 import ContactForm from "./ContactForm";
 
 export function Contact() {
