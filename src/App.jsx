@@ -9,7 +9,7 @@ import { Home } from "./components/screens/Home";
 import Terms from "./components/screens/Terms";
 import { Contact } from "./components/screens/contact/Contact";
 import Success from "./components/screens/contact/Success";
-import { Events } from "./components/screens/events/Events";
+import Events from "./components/screens/events/Events";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
