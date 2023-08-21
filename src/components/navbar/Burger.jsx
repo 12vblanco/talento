@@ -12,9 +12,9 @@ const Burger = ({ handleToggle, isOpen }) => {
     handleToggle();
     window.location.href = "/contact";
   };
-  const handleAboutClick = () => {
+  const handleEventsClick = () => {
     handleToggle();
-    window.location.href = "/home#about";
+    window.location.href = "/events";
   };
   const handleServicesClick = () => {
     handleToggle();
@@ -51,7 +51,7 @@ const Burger = ({ handleToggle, isOpen }) => {
       <OverlayMenu isOpen={isOpen}>
         <MenuList>
           <MenuItem onClick={handleHomeClick}>Home</MenuItem>
-          <MenuItem onClick={handleAboutClick}>About</MenuItem>
+          <MenuItem onClick={handleEventsClick}>Events</MenuItem>
           <MenuItem onClick={handleServicesClick}>Services</MenuItem>
           <MenuItem onClick={handleContactClick}>Contact</MenuItem>
           <LinkDiv>
@@ -107,7 +107,7 @@ const BurgerIcon = styled.div`
     background: #000;
   }
 
-  @media (min-width: 899px) {
+  @media (min-width: 900px) {
     display: none;
   }
 `;
@@ -230,10 +230,5 @@ const MenuLink = styled.div`
     color: #fd8642;
   }
 `;
-
-// const CustomLink = styled(Link)`
-//   color: inherit;
-//   text-decoration: none;
-// `;
 
 export default Burger;
