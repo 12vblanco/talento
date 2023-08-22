@@ -31,6 +31,10 @@ const FooterContainer = styled.div`
   width: 100vw;
   height: 420px;
   background: #333;
+
+  @media (max-width: 580px) {
+    height: fit-content;
+  }
 `;
 
 const FooterOverlay = styled.div`
