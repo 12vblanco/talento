@@ -1,15 +1,18 @@
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 import { React, useEffect, useState } from "react";
 import styled from "styled-components";
 import bgImgBk from "../../../assets/img/about1.jpg";
 import { AdminLogin } from "./AdminLogin";
 import { EventForm } from "./EventForm";
+import authInstance from "./Firebase";
 
 export function EventBody() {
   const [series, setSeries] = useState("");
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const [link, setLink] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,6 +38,27 @@ export function EventBody() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(authInstance, (user) => {
+      if (user) {
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      await signOut(authInstance);
+      console.log("Admin logged out successfully");
+    } catch (error) {
+      console.error("Error logging out:", error.message);
+    }
+  };
+
   return (
     <Div>
       <AdminLogin
@@ -46,6 +70,8 @@ export function EventBody() {
         setDate={setDate}
         link={link}
         setLink={setLink}
+        handleLogout={handleLogout}
+        isLoggedIn={isLoggedIn}
       />
 
       <EventContainer>

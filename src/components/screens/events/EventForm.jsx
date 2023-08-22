@@ -53,7 +53,7 @@ const Date = styled.p`
 `;
 const LinkStyled = styled.a`
   cursor: pointer;
-  color: black;
+  color: blue;
   &:hover {
     color: white;
   }

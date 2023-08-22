@@ -1,9 +1,5 @@
-import {
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-  signOut,
-} from "firebase/auth";
-import { useEffect, useState } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
 import styled from "styled-components";
 import ArrowIcon from "../../../assets/icons/ArrowIcon";
 import { AdminForm } from "./AdminFrom";
@@ -11,30 +7,19 @@ import authInstance from "./Firebase";
 
 export function AdminLogin({
   series,
+  handleLogout,
   setSeries,
   title,
   setTitle,
   date,
   setDate,
   link,
+  isLoggedIn,
   setLink,
 }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isActive, setIsActive] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(authInstance, (user) => {
-      if (user) {
-        setIsLoggedIn(true);
-      } else {
-        setIsLoggedIn(false);
-      }
-    });
-
-    return () => unsubscribe();
-  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,15 +28,6 @@ export function AdminLogin({
       console.log("Admin logged in successfully");
     } catch (error) {
       console.error("Error logging in:", error.message);
-    }
-  };
-
-  const handleLogout = async () => {
-    try {
-      await signOut(authInstance);
-      console.log("Admin logged out successfully");
-    } catch (error) {
-      console.error("Error logging out:", error.message);
     }
   };
 
@@ -82,6 +58,7 @@ export function AdminLogin({
         <AdminFormContainer isVisible={isLoggedIn}>
           <AdminForm
             link={link}
+            handleLogout={handleLogout}
             setLink={setLink}
             series={series}
             setSeries={setSeries}

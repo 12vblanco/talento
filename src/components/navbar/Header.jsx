@@ -28,6 +28,9 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 600px) {
+    margin-top: 12px;
+  }
 `;
 
 export default Header;
