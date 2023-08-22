@@ -58,6 +58,7 @@ export function AdminLogin({
         <AdminFormContainer isVisible={isLoggedIn}>
           <AdminForm
             link={link}
+            setIsActive={setIsActive}
             handleLogout={handleLogout}
             setLink={setLink}
             series={series}
@@ -65,8 +66,9 @@ export function AdminLogin({
             title={title}
             setTitle={setTitle}
             date={date}
+            isActive={isActive}
             setDate={setDate}
-          />{" "}
+          />
           <LogoutText onClick={handleLogout}>Log Out</LogoutText>
         </AdminFormContainer>
       </LoginContainer>

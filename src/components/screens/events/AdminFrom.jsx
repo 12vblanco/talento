@@ -36,11 +36,13 @@ export function AdminForm({
   setSeries,
   title,
   setTitle,
+  isActive,
   date,
   setDate,
   link,
   setLink,
   handleLogout,
+  setIsActive,
 }) {
   return (
     <FormContainer
@@ -75,7 +77,13 @@ export function AdminForm({
         onChange={(e) => setLink(e.target.value)}
         placeholder="Link"
       />
-      <LoginButton type="submit" onClick={handleLogout}>
+      <LoginButton
+        type="submit"
+        onClick={() => {
+          handleLogout();
+          setIsActive(!isActive);
+        }}
+      >
         Update
       </LoginButton>
     </FormContainer>
