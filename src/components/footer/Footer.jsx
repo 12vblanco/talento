@@ -34,6 +34,7 @@ const FooterContainer = styled.div`
 
   @media (max-width: 580px) {
     height: fit-content;
+    padding: 12px 0;
   }
 `;
 
