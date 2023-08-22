@@ -30,6 +30,9 @@ const LogoRow = styled.div`
   align-items: center;
   justify-content: space-around;
   margin-bottom: 2rem;
+  @media (max-width: 580px) {
+    display: none;
+  }
 `;
 
 const LogoImage = styled.img`
