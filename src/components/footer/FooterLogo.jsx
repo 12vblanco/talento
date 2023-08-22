@@ -30,9 +30,6 @@ const LogoRow = styled.div`
   align-items: center;
   justify-content: space-around;
   margin-bottom: 2rem;
-  @media (max-width: 580px) {
-    display: none;
-  }
 `;
 
 const LogoImage = styled.img`
@@ -41,9 +38,8 @@ const LogoImage = styled.img`
   max-height: 50px;
   height: auto;
   margin-right: 1.2rem;
-  @media (max-width: 380px) {
-    width: 70px;
-    height: 70px;
+  @media (max-width: 580px) {
+    display: none;
   }
 `;
 
