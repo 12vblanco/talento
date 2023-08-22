@@ -27,7 +27,8 @@ async function handleSubmit(event, series, title, date, link) {
   } catch (e) {
     console.error("Error adding document: ", e);
   }
-  console.log({ series, title, date, link });
+
+  // console.log({ series, title, date, link });
 }
 
 export function AdminForm({
@@ -99,6 +100,7 @@ const LoginInput = styled.input`
 const LoginButton = styled.button`
   font-family: "OpenSans";
   font-weight: 700;
+  height: 42px;
   border: none;
   cursor: pointer;
   margin-top: 8px;
