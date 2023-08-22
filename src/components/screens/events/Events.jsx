@@ -21,6 +21,6 @@ const Div = styled.div`
   justify-content: center;
   padding-top: 160px;
   padding-bottom: 50px;
-  min-height: 100vh;
+  min-height: calc(100vh - 200px);
 `;
 export default Events;
