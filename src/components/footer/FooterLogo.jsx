@@ -35,6 +35,7 @@ const LogoRow = styled.div`
 const LogoImage = styled.img`
   width: inherit;
   max-width: 50px;
+  max-height: 50px;
   height: auto;
   margin-right: 1.2rem;
   @media (max-width: 380px) {
