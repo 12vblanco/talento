@@ -173,9 +173,6 @@ const OverlayMenu = styled.div`
   transition: transform 0.3s ease-in-out;
   transform: ${(props) =>
     props.isOpen ? "translateX(0px)" : "translateX(100%)"};
-
-  @media (max-width: 600px) {
-  }
 `;
 
 const MenuList = styled.ul`

@@ -29,7 +29,7 @@ const DivContent = styled.div`
   position: absolute;
   width: 100%;
   max-width: 100%;
-  height: calc(100vh - 143px);
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
