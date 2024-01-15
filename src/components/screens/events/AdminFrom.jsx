@@ -3,8 +3,16 @@ import React from "react";
 import styled from "styled-components";
 import { db } from "./Firebase";
 
-async function handleSubmit(event, series, title, date, link) {
+export async function handleSubmit(
+  event,
+  series,
+  title,
+  date,
+  link,
+  handleLogout
+) {
   event.preventDefault();
+
   if (!series || !title || !date) {
     console.error("One or more fields are undefined or empty.");
     return;
@@ -22,13 +30,14 @@ async function handleSubmit(event, series, title, date, link) {
       },
       { merge: true }
     );
-
     console.log("Document written with ID: fixedEventId");
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
 
-  // console.log({ series, title, date, link });
+    if (handleLogout) {
+      handleLogout();
+    }
+  } catch (e) {
+    console.error("Error updating document: ", e.message);
+  }
 }
 
 export function AdminForm({
@@ -46,7 +55,9 @@ export function AdminForm({
 }) {
   return (
     <FormContainer
-      onSubmit={(event) => handleSubmit(event, series, title, date, link)}
+      onSubmit={(event) =>
+        handleSubmit(event, series, title, date, link, handleLogout)
+      }
     >
       <Text>Admin, You Are Logged In!</Text>
       <Label>Series name</Label>
@@ -80,7 +91,7 @@ export function AdminForm({
       <LoginButton
         type="submit"
         onClick={() => {
-          handleLogout();
+          // handleLogout();
           setIsActive(!isActive);
         }}
       >

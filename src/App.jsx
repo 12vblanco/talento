@@ -18,6 +18,8 @@ function App() {
     setIsOpen(!isOpen);
   };
 
+  console.log(window.innerWidth);
+
   return (
     <>
       <CookieConsent
